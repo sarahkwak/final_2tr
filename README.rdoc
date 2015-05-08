@@ -1,7 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2Tr is a web based application to help people to learn how to code through online-based curriculum. 
+2Tr provides a video chat based flatform to connect code learners with volunteer tutors. 
 
 Things you may want to cover:
 
