@@ -3,26 +3,17 @@
 2Tr is a web based application to help people to learn how to code through online-based curriculum. 
 2Tr provides a video chat based flatform to connect code learners with volunteer tutors. 
 
-Things you may want to cover:
+2Tr offers:
 
-* Ruby version
+* Verified Online based curriculums for Ruby, HTML/CSS, Javascript and basic Computer Science
 
-* System dependencies
+* Tutors can anser any questions
 
-* Configuration
+* Student learning status with D3 technology
 
-* Database creation
+* Certification to Tutors for their volunteering work
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Login through LinkedIn
 
 
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
