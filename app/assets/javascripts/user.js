@@ -19,6 +19,7 @@ $(document).ready(function(){
     });
   });
   CineIOPeer.on('call', function(data) {
+    alert("Call received")
     CineIOPeer.startCameraAndMicrophone();
     var call = data.call;
     CineIOPeer.on('media-added', function(videoData) {
