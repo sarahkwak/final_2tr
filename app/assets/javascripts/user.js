@@ -1,17 +1,34 @@
 $(document).ready(function(){
-
-  $('.start_video').on('click', function(event){
-  event.preventDefault();
-
+  var userId
   CineIOPeer.init('9cd3947bc9fba6aa761c4edf5b795dc6');
-  CineIOPeer.startCameraAndMicrophone();
+  var request = $.ajax({
+    url: '/users/signature',
+    type: 'get',
+    dataType: 'json'
+  });
+  request.done(function(serverData) {
+    CineIOPeer.identify(serverData.identity, serverData.timestamp, serverData.signature);
+    userId = serverData.signature
+  });
+  $('.start_video').on('click', function(event){
+    event.preventDefault();
+    CineIOPeer.startCameraAndMicrophone();
 
-    CineIOPeer.on('media-added', function(data){
-    var room = "the-best-room-ever";
-    CineIOPeer.join(room);
-    var peers = $('.peers');
-    peers.append(data.videoElement);
+    CineIOPeer.call(userId);
+    CineIOPeer.on('call-placed', function(data) {
+      // CineIOPeer.join(data.call.room);
+      var call = data.call;
+      CineIOPeer.sendDataToAll(data);
+
+      $('.video-screen').append(data.videoElement);
     });
-  })
+  });
+  CineIOPeer.on('call', function(data) {
+    var call = data.call;
+    call.answer();
+    CineIOPeer.sendDataToAll(data);
+  $('.video-screen').append(data.videoElement);
+  });
 })
+
 
