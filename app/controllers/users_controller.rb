@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def signature
-    client = CineIo::Client.new(secretKey: '9cd3947bc9fba6aa761c4edf5b795dc6')
+    client = CineIo::Client.new(secretKey: 'b0574ef773f605cf36f457ef920d5813')
     identity = current_user.id
     response = client.peer.generate_identity_signature(identity)
     render json: response
