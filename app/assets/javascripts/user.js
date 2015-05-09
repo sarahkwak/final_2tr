@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  CineIOPeer.init('9cd3947bc9fba6aa761c4edf5b795dc6');
+  CineIOPeer.init(ENV['CINE_IO_PUBLIC_KEY']);
     var request = $.ajax({
       url: '/users/signature',
       type: 'get',
