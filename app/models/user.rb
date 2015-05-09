@@ -13,11 +13,7 @@ class User < ActiveRecord::Base
 
   has_many :reviewee_relationships, class_name: "Review", foreign_key: "reviewer_id"
   has_many :reviewees, class_name: "User", through: :reviewee_relationships
-  # has_many :reviewer_relationships, through: :review, foreign_key: :reviewer_id
-  # has_many :reviewers, source: :user, through: :reviewer_relationships
 
-  # has_many :reviewee_relationships, through: :review, foreign_key: :reviewee_id
-  # has_many :reviewees, source: :user, through: :reviewee_relationships
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
