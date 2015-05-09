@@ -1,0 +1,42 @@
+ .grid-container {
+    width : 100%;
+    max-width : 1200px;
+}
+.hero {
+  background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+.how_to {
+  background-color: #eee;
+  height: 500px;
+}
+.curriculum {
+  position: relative;
+  float: left;
+  height: 500px;
+}
+.tutor_list {
+  position: relative;
+  float: right;
+  height: 500px;
+}
+.footer {
+  height: 50px;
+  background-color:
+}
+
+.learn_more {
+
+}
+.need_help {
+
+}
+.about_2tr {
+
+}
+.top_cities {
+
+}
