@@ -8,7 +8,8 @@ Rails.application.routes.draw do
    get 'users/signature' => 'users#signature'
    get '/questions' => 'questions#index'
    post '/questions' => 'questions#create'
-
+   get '/questions/:id/answers' => 'answers#show', as: 'answers'
+   post '/questions/:id/answers' => 'answers#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

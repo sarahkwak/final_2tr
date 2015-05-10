@@ -8,11 +8,38 @@
   <%= f.submit %>
 <% end %>
 
+<script id="question-template" type="text/x-handlebars-template">
+  <div class="question" id={{ id }}>
+    <p>{{ title }}</p>
+    <p>{{ content }}</p>
+    <button class="show-answers">Show Answers</button>
+    <button class="new-answer">Add Answer</button>
+  </div>
+</script>
+
+<script id="answer-template" type="text/x-handlebars-template">
+  <div class="answer" id="/{{ id }}">
+    <p>{{ title }}</p>
+    <p>{{ content }}</p>
+  </div>
+</script>
+
 <div class="questions-container">
   <% @questions.each do |question| %>
-    <div class="question">
+    <div class="question" id="<%= question.id %>">
       <p><%= question.title %></p>
       <p><%= question.content %></p>
+      <button class="show-answers">Show Answers</button>
+      <button class="new-answer">Add Answer</button>
     </div>
   <% end %>
 </div>
+
+<div class="form-container hidden">
+  <form class="new-answer-form">
+    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="content" placeholder="Content">
+    <input type="submit" value="Add answer" >
+  </form>
+</div>
+
