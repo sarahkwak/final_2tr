@@ -25,8 +25,12 @@ ActiveRecord::Schema.define(version: 20150508175930) do
   end
 
   create_table "curriculums", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title"
+    t.string   "description"
+    t.string   "url"
+    t.string   "curriculum_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "questions", force: :cascade do |t|

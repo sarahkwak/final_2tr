@@ -1,58 +1,93 @@
-<div class="grid-container">
-<title>2TR Online Learning Can be Easier</title>
-<nav>
-<div class="logo three columns"></div>
-<div class="search three columns"></div>
-<div class="authentication three columns"></div>
-</nav>
-  <div class="hero">
-  </div>
+<div class="container">
+  <title>2TR Online Learning Can be Easier</title>
+  <nav class="container">
+    <div class="logo three columns">Logo</div>
+    <div class="search three columns" id="tutor_login"><%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %></div>
+    <div id="user_nav" class="u-pull-right">
+     <% if user_signed_in? %>
+          <% if session[:linkedin_token].nil? %>
+              Welcome <%= current_user.email %>
+               <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          <% else %>
+               <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
+               Welcome <%= current_user.email %>
+          <% end %>
+      <% else %>
+        <%= link_to "📚 Log In", new_user_session_path, method: :get %>
+        <%= link_to "📖 Sign Up", new_user_registration_path, method: :get %>
+     <% end %>
+    </div>
+  </nav>
 
-  <div class="how_to">
-    <div class="how_to_1 three columns">
-      <p>Log in or Sign in as a Student
+  <body>
+</div>
+    <div class="hero"></div>
+<div class="container">
+
+    <div class="how_to">
+      <section class="header">
+        <div class="how_to_1 four columns value-prop">
+          <img src="">
+          <p>Log in or Sign in as a Student/Tutor</p>
+        </div>
+        <img src="">
+        <div class="how_to_2 four columns value-prop">
+          <p>Enjoy courses we carefully selected</p>
+        </div>
+        <div class="how_to_3 four columns value-prop">
+          <img src="">
+          <p>If you have a question, connect with one of our trusted tutors</p>
+        </div>
+      </section>
     </div>
-    <div class="how_to_2 three columns">
-      <p>Enjoy Resources we carefully selected</p>
-    </div>
-    <div class="how_to_3 three columns">
-      <p>If you have a question, connect with one of our tutors</p>
-    </div>
-  </div>
-<!-- float right -->
-  <div class="curriculum two columns">
-    <ul>
-      <li>HTML/CSS</li>
-      <li>JavaScript</li>
-      <li>Ruby</li>
-      <li>Computer Science</li>
-    </ul>
-  </div>
-<!-- float left -->
-  <div class="tutor_list two columns">
-    <div class="tutor"></div>
-  </div>
+
+    <div class="main-container">
+    <!-- float right -->
+      <div class="curriculum six columns u-pull-left">
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Ruby</li>
+          <li>Computer Science</li>
+        </ul>
+      </div>
+    <!-- float left -->
+      <div class="tutor_list six columns u-pull-right">
+        <div class="tutor">
+          <p>fake tutor name</p>
+          <p>fake tutor specialty</p>
+          <p>fake tutor availability</p>
+        </div>
+      </div>
+     <!-- clear container -->
+    <div class="u-cf"></div>
+  </body>
 
   <footer>
     <div class="learn_more three columns">
+      <h6 class="docs-header">Learn More</h6>
       <li>Read our Blog</li>
       <li>How 2Tr works?</li>
     </div>
-    <div class="need_help three columns">
-      <li>Contact Center</li>
-      <li>customer@2tr.com</li>
 
+    <div class="need_help three columns">
+      <h6 class="docs-header">Contact Center</h6>
+      <li>customer@2tr.com</li>
     </div>
+
     <div class="about_2tr three columns">
+      <h6 class="docs-header">About 2tr</h6>
       <li>In the Press</li>
       <li>Jobs</li>
     </div>
+
     <div class="top_cities three columns">
+      <h6 class="docs-header">Top Cities</h6>
       <li>San Francisco</li>
       <li>Vancouver</li>
       <li>Hawaii</li>
     </div>
   </footer>
-  <div class='peers'>
-  </div>
+
+    <div class='peers'></div>
 </div>
