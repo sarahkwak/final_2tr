@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
 require 'JSON'
 
 json_data = File.read('ruby.json')
@@ -15,17 +16,12 @@ p "*" * 100
 p parsed_data['ruby']
 parsed_data['ruby']
 i = 0
-while i<parsed_data['ruby'].length
-  curriculum = Curriculum.new
-  curriculum.url = parsed_data['ruby'][i]['url']
-  curriculum.description = parsed_data['ruby'][i]['description']
-  curriculum.title = parsed_data['ruby'][i]['title']
-  curriculum.curriculumn_type = "Ruby"
-  curriculum.save
+while i< parsed_data['ruby'].length
+  curriculum = Curriculum.create!(url: parsed_data['ruby'][i]['url'], description: parsed_data['ruby'][i]['description'], title:parsed_data['ruby'][i]['title'], curriculum_type: "Ruby")
   i+=1
 end
 
-# Curriculum.create(curriculumn_type: "Ryby", title: "CodeAcademy, Ruby", url: "http://www.codecademy.com/en/tracks/ruby", description: "Learn to program in Ruby, a ﬂexible language used to create sites like Codecademy
+Curriculum.create!(curriculum_type: "Ryby", title: "CodeAcademy, Ruby", url: "http://www.codecademy.com/en/tracks/ruby", description: "Learn to program in Ruby, a ﬂexible language used to create sites like Codecademy")
 
 # a = {"ruby"=>[1, 2, 3, 4, 5]}
 # a.each do |key, value|
