@@ -1,0 +1,9 @@
+<div class="user-container">
+  <% @students.each do |student| %>
+    <div class="user">
+      <img src="<%= student.url %>" />
+      <%= student.first_name %>
+      <%= student.description %>
+    </div>
+  <% end %>
+</div>
