@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'users#index'
    get 'users/signature' => 'users#signature'
-
+   get '/questions' => 'questions#index'
+   post '/questions' => 'questions#create'
+   get '/questions/:id/answers' => 'answers#show', as: 'answers'
+   post '/questions/:id/answers' => 'answers#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

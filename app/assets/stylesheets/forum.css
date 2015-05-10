@@ -1,0 +1,11 @@
+.hidden {
+  display: none;
+}
+
+.question {
+  border: 1px solid black;
+}
+
+.answer {
+  border: 1px solid red;
+}
