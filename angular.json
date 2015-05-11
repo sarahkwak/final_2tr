@@ -1,0 +1,44 @@
+{
+  "angularJS": [
+    {
+      "title": "MVC Frameworks in AngularJS",
+      "url": "https://teamtreehouse.com/library/angularjs/mvc-frameworks-in-angularjs/what-is-an-mvc",
+      "description": "Before we dive into AngularJS in specific, let’s consider what exactly an MVC framework is, and in what cases we want to use it instead of a library like jQuery."
+    },
+    {
+      "title": "An Introduction to Two-Way Data Binding",
+      "url": "http://teamtreehouse.com/library/angularjs/an-introduction-to-twoway-data-binding/what-is-twoway-data-binding",
+      "description": "Two-way data binding is integral to what makes Angular.JS so powerful. Instead of trying to remember to update each representation of your data everytime there’s a change, with data binding it all happens automatically."
+    },
+    {
+      "title": "Services and Dependencies",
+      "url": "http://teamtreehouse.com/library/angularjs/services-and-dependencies/what-is-dependency-injection",
+      "description": "In addition to directives, one of the most powerful features of AngularJS is Dependency Injection. Services and Dependencies allow you to easily share information and state across your application, as well as providing a helpful interface for connecting to external APIs and data sources."
+    },
+    {
+      "title": "An Introduction to Directives",
+      "url": "http://teamtreehouse.com/library/angularjs/an-introduction-to-directives/what-is-a-directive",
+      "description": "While two-way data binding let’s you wire up discrete bits of data to your views, directives allow you to package up modules that can be used for anything from specific renderings (ie. a project list) to an unique enhancement such as adding autocomplete functionality to a standard input field."
+    },
+    {
+      "title": "Extending Inputs",
+      "url": "http://teamtreehouse.com/library/angularjs/extending-inputs/a-deeper-dive-into-ngmodel",
+      "description": "There are two primary ways for users to interact with your application: inputs and buttons. Of course, today an input is rarely just a text field, but could be a datepicker, a WYSIWYG editor, or even a multi-stage wizard. In this section, we’ll look at a couple of the ways to use directives to bring the power of two-way data binding into these more complicated inputs."
+    },
+    {
+      "title": "Making Your Own Widget",
+      "url": "http://teamtreehouse.com/library/angularjs/making-your-own-widget/what-are-we-building",
+      "description": "To finish off this course, let’s combine all those pieces together into a cool widget that exemplifies how you might utilize these elements in a real world application."
+    },
+    {
+      "title": "Shaping up with Angular.js",
+      "url": "https://www.codeschool.com/courses/shaping-up-with-angular-js",
+      "description": "Learn to use Angular.js by adding behavior to your HTML and speeding up your application's responsiveness. Get ready to dive into all the angles of Angular.js!"
+    },
+    {
+      "title": "CodeAcademy - Learn Angular.js",
+      "url": "http://www.codecademy.com/en/learn/learn-angularjs",
+      "description": "Learn to build web apps using AngularJS 1.x. By the end of the course, you'll be able to use AngularJS to create your own apps."
+    }
+  ]
+}
