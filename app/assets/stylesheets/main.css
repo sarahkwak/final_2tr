@@ -16,7 +16,8 @@ div {
 }
 
 #user_nav .logged_in a{
-  margin: 20%;
+  margin: 10%;
+
   text-decoration: none;
   color: black;
 }
@@ -114,5 +115,8 @@ footer {
   color: white;
 }
 
-
+.logged_in_nav {
+  display: inline-block;
+  width: 23vw;
+}
 
