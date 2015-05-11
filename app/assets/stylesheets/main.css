@@ -1,3 +1,26 @@
+div {
+  /*border: 5px dotted black;*/
+}
+
+#user_nav {
+  text-align: center;
+  background-color: rgba(217, 101, 76, .2);
+  padding: .8%;
+  border-radius: 10px 10px 0 0;
+}
+
+#user_nav #not_logged_in a {
+  margin: 13.2%;
+  text-decoration: none;
+  color: black;
+}
+
+#user_nav .logged_in a{
+  margin: 20%;
+  text-decoration: none;
+  color: black;
+}
+
 .hero {
   background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");
   background-size: 100%;
@@ -16,27 +39,28 @@
   color: #222;
 }
 .how_to {
-  /*background-color: #eee;*/
-  height: 300px;
+  height: 200px;
+  /*margin: 1%;*/
+  /*background-color: rgba(161, 142, 169, .5);*/
+  padding: 3%;
 }
-.how_to_1 {
-  width: 300px;
-}
-.how_to_2 {
-  width: 300px;
-}
-.how_to_3 {
-  width: 300px;
-}
+
 .main-container {
-  background-color: #eee;
+  /*background-color: #eee;*/
+  text-align: center;
+  margin-top: 0;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 .curriculum {
   position: relative;
-  float: left;
-  height: 300px;
-  width: 45%;
+  /*height: 10%;*/
   text-align: center;
+  width: 8%;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 8px;
+  padding: 3%;
 }
 .tutor_list {
   position: relative;
@@ -46,34 +70,16 @@
 }
 
 footer {
-  height: 50px;
-  background-color;
-  float: right;
+  background-color: rgba(217, 101, 76, .2);
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding-top: 18px;
+  margin-top: 25px;
+  border-radius: 0 0 10px 10px;
 }
 
-.learn_more {
-
+.login-render {
+  display: none
 }
-.need_help {
-
-}
-.about_2tr {
-
-}
-.top_cities {
-
-}
-
-.box {
-  width: 100px;
-  height: 25px;
-  border: 3px solid black;
-  padding-bottom: 5px;
-
-}
-
-li {
-  list-style: none;
-}
-
 
