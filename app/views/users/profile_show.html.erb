@@ -10,8 +10,8 @@
   <div class="review-container">
     <% @reviews.each do |review| %>
       <div class="review">
-       Review: <%= review.content %>
-       Review Rating: <%= review.rating %>
+       <p>Review: <%= review.content %></p>
+       <p>Review Rating: <%= review.rating %></p>
       </div>
     <% end %>
   </div>
