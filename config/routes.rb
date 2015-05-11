@@ -10,6 +10,11 @@ Rails.application.routes.draw do
    post '/questions' => 'questions#create'
    get '/questions/:id/answers' => 'answers#show', as: 'answers'
    post '/questions/:id/answers' => 'answers#create'
+   get '/students' => 'users#students', as: 'students'
+   get '/tutors' => 'users#tutors', as: 'tutors'
+   get '/video' => 'users#video'
+   post '/users/:id/reviews' => 'reviews#create'
+   get '/profile/:id' => 'users#show', as: 'profile'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

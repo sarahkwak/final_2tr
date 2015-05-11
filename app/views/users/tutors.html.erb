@@ -1,0 +1,13 @@
+<h1>Tutors</h1>
+
+<div class="user-container">
+  <% @tutors.each do |tutor| %>
+    <div class="user" id="<%= tutor.id %>">
+      <img src="<%= tutor.url %>" alt="Profile">
+      <p><%= tutor.first_name %></p>
+      <p><%= tutor.description %></p>
+      <button class="start_video">Chat</button>
+      <%= link_to "Profile", profile_path(tutor) %>
+    </div>
+  <% end %>
+</div>
