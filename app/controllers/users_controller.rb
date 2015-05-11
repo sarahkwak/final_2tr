@@ -10,4 +10,15 @@ class UsersController < ApplicationController
     response = client.peer.generate_identity_signature(identity)
     render json: response
   end
+
+  def students
+    @students = User.where(user_type: 1)
+  end
+
+  def tutors
+    @tutors = User.where(user_type: 2)
+  end
+
+  def video
+  end
 end
