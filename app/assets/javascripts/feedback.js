@@ -10,13 +10,17 @@ $(document).ready(function() {
     reviewModal.open();
     $('.new-review').on('submit', function(event) {
       event.preventDefault();
+      reviewModal.close();
       var request = $.ajax({
         url: '/users/' + id + '/reviews',
         type: 'post',
         data: $('.new-review').serialize()
       });
       request.done(function(serverData) {
-        reviewModal.close();
+        var clone = $('.review-container').find('div').first().clone();
+        clone.find('p').first().text('Review: ' + serverData.content);
+        clone.find('p').last().text('Review Rating: ' + serverData.rating);
+        $('.review-container').append(clone)
       });
       request.fail(function(serverData) {
         console.log('Something went wrong');

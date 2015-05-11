@@ -14,7 +14,7 @@ Rails.application.routes.draw do
    get '/tutors' => 'users#tutors', as: 'tutors'
    get '/video' => 'users#video'
    post '/users/:id/reviews' => 'reviews#create'
-   get '/profile/:id' => 'users#show'
+   get '/profile/:id' => 'users#show', as: 'profile'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -23,3 +23,7 @@
   width: 100px;
   height: 100px;
 }
+
+.review {
+  border: 1px solid red;
+}
