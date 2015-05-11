@@ -1,9 +1,13 @@
+<h1>Tutors</h1>
+
 <div class="user-container">
   <% @tutors.each do |tutor| %>
     <div class="user">
-      <img src="<%= tutor.url %>" />
-      <%= tutor.first_name %>
-      <%= tutor.description %>
+      <img src="<%= tutor.url %>" alt="Profile">
+      <p><%= tutor.first_name %></p>
+      <p><%= tutor.description %></p>
+      <button id="<%= tutor.id %>"class="start_video">Video chat</button>
+      <button class="<%= tutor.id %>">Leave Feedback</button>
     </div>
   <% end %>
 </div>

@@ -18,4 +18,7 @@ class UsersController < ApplicationController
   def tutors
     @tutors = User.where(user_type: 2)
   end
+
+  def video
+  end
 end

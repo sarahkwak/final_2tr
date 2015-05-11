@@ -1,9 +1,12 @@
+<h1>Students</h1>
+
 <div class="user-container">
   <% @students.each do |student| %>
     <div class="user">
-      <img src="<%= student.url %>" />
-      <%= student.first_name %>
-      <%= student.description %>
+      <img src="<%= student.url %>" >
+      <p><%= student.first_name %></p>
+      <p><%= student.description %></p>
+      <button class="<%= student.id %>">Leave Feedback</button>
     </div>
   <% end %>
 </div>

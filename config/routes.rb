@@ -12,6 +12,7 @@ Rails.application.routes.draw do
    post '/questions/:id/answers' => 'answers#create'
    get '/students' => 'users#students', as: 'students'
    get '/tutors' => 'users#tutors', as: 'tutors'
+   get '/video' => 'users#video'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
