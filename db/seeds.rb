@@ -22,11 +22,72 @@ while i< parsed_data['ruby'].length
   i+=1
 end
 
-# Curriculum.create!(curriculum_type: "Ryby", title: "CodeAcademy, Ruby", url: "http://www.codecademy.com/en/tracks/ruby", description: "Learn to program in Ruby, a ﬂexible language used to create sites like Codecademy")
+angular_data = File.read('angular.json')
+parsed_data = JSON.parse(angular_data)
+parsed_data['angularJS']
+i = 0
+while i< parsed_data['angularJS'].length
+  curriculum = Curriculum.new
+  curriculum.url = parsed_data['angularJS'][i]['url']
+  curriculum.description = parsed_data['angularJS'][i]['description']
+  curriculum.title = parsed_data['angularJS'][i]['title']
+  curriculum.curriculum_type = "AngularJS"
+  curriculum.save
+  i+=1
+end
 
-# a = {"ruby"=>[1, 2, 3, 4, 5]}
-# a.each do |key, value|
-#   for i in 0..(value.length-1)
-#     puts value[i]
-#   end
-# end
+git_data = File.read('git.json')
+parsed_data = JSON.parse(git_data)
+parsed_data['git']
+i = 0
+while i< parsed_data['git'].length
+  curriculum = Curriculum.new
+  curriculum.url = parsed_data['git'][i]['url']
+  curriculum.description = parsed_data['git'][i]['description']
+  curriculum.title = parsed_data['git'][i]['title']
+  curriculum.curriculum_type = "Git"
+  curriculum.save
+  i+=1
+end
+
+jquery_data = File.read('jquery.json')
+parsed_data = JSON.parse(jquery_data)
+parsed_data['jQuery']
+i = 0
+while i< parsed_data['jQuery'].length
+  curriculum = Curriculum.new
+  curriculum.url = parsed_data['jQuery'][i]['url']
+  curriculum.description = parsed_data['jQuery'][i]['description']
+  curriculum.title = parsed_data['jQuery'][i]['title']
+  curriculum.curriculum_type = "jQuery"
+  curriculum.save
+  i+=1
+end
+
+fundamentals_data = File.read('fundamentals.json')
+parsed_data = JSON.parse(fundamentals_data)
+parsed_data['fundamentals']
+i = 0
+while i< parsed_data['fundamentals'].length
+  curriculum = Curriculum.new
+  curriculum.url = parsed_data['fundamentals'][i]['url']
+  curriculum.description = parsed_data['fundamentals'][i]['description']
+  curriculum.title = parsed_data['fundamentals'][i]['title']
+  curriculum.curriculum_type = "Fundamentals"
+  curriculum.save
+  i+=1
+end
+
+sql_data = File.read('sql.json')
+parsed_data = JSON.parse(sql_data)
+parsed_data['SQL']
+i = 0
+while i< parsed_data['SQL'].length
+  curriculum = Curriculum.new
+  curriculum.url = parsed_data['SQL'][i]['url']
+  curriculum.description = parsed_data['SQL'][i]['description']
+  curriculum.title = parsed_data['SQL'][i]['title']
+  curriculum.curriculum_type = "SQL"
+  curriculum.save
+  i+=1
+end

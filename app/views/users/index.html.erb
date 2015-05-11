@@ -1,86 +1,158 @@
-<div class="container">
+<div class="top-container">
   <title>2TR Online Learning Can be Easier</title>
-  <nav class="container">
-    <div class="logo three columns">Logo</div>
-    <div class="search three columns" id="tutor_login"><%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %></div>
-    <div id="user_nav" class="u-pull-right">
-     <% if user_signed_in? %>
-          <% if session[:linkedin_token].nil? %>
-              Welcome <a href="profile/<%= current_user.id %>" ><%= current_user.email %>
-               <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-          <% else %>
-               <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
-               Welcome <%= current_user.email %>
-          <% end %>
-      <% else %>
-        <%= link_to "📚 Log In", new_user_session_path, method: :get %>
-        <%= link_to "📖 Sign Up", new_user_registration_path, method: :get %>
+  <div id="user_nav" >
+   <% if user_signed_in? %>
+   <% if session[:linkedin_token].nil? %>
+   <div class="logged_in">
+     <a href=''>Welcome <%= current_user.email %></a>
+     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+   </div>
+   <% else %>
+   <div class="logged_in">
+     <a href=''>Welcome <%= current_user.email %></a>
+     <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
      <% end %>
+     <% else %>
+     <div id="not_logged_in">
+      <%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %>
+      <%= link_to "📚 Log In", new_user_session_path, method: :get%>
+      <%= link_to "📖 Sign Up", new_user_registration_path, method: :get %>
     </div>
-  </nav>
+    <% end %>
+  </div>
 
-  <body>
+  <div class="login-render">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+  </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+    <% end -%>
+
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+  </div>
 </div>
-    <div class="hero"></div>
-<div class="container">
 
-    <div class="how_to">
-      <section class="header">
-        <div class="how_to_1 four columns value-prop">
-          <img src="">
-          <p>Log in or Sign in as a Student/Tutor</p>
-        </div>
-        <img src="">
-        <div class="how_to_2 four columns value-prop">
-          <p>Enjoy courses we carefully selected</p>
-        </div>
-        <div class="how_to_3 four columns value-prop">
-          <img src="">
-          <p>If you have a question, connect with one of our trusted tutors</p>
-        </div>
-      </section>
-    </div>
+<div class="hero"></div>
+
+<div class="how_to">
+  <div class="how_to_1 four columns value-prop">
+    <p>Log in or Sign in as a Student/Tutor</p>
+    <img src="">
   </div>
+  <div class="how_to_2 four columns value-prop">
+    <img src="">
+    <p>Enjoy courses we carefully selected</p>
+  </div>
+  <div class="how_to_3 four columns value-prop">
+    <img src="">
+    <p>If you have a question, connect with one of our trusted tutors</p>
+  </div>
+</div>
 
-
-
-
-
-
-
-<!-- float right -->
-  <div class="curriculum two columns">
+<div class="main-container">
+  <div class="curriculum">
     <ul>
-      <li id="html">HTML/CSS</li><br>
-      <li id="javascript">JavaScript</li><br>
-      <li id="ruby">Ruby</li><br>
-      <li id="cs">CS</li>
+      <li>HTML</li>
     </ul>
   </div>
-<!-- float left -->
-  <div class="tutor_list two columns">
-    <div class="tutor"></div>
+  <div class="curriculum">
+    <ul>
+      <li>CSS</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>Javascript</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>jQuery</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>PHP</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>Python</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>HTML</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>CSS</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>angular.js</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>react.js</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>coffee.js</li>
+    </ul>
+  </div>
+  <div class="curriculum">
+    <ul>
+      <li>git</li>
+    </ul>
+  </div>
+</div>
+<footer>
+  <div class="learn_more three columns">
+    <h6 class="docs-header">Learn More</h6>
+    <li>Read our Blog</li>
+    <li>How 2Tr works?</li>
   </div>
 
-  <footer>
-    <ul class="learn_more three columns">
-      <li>Read our Blog</li>
-      <li>How 2Tr works?</li>
-    </ul>
-    <ul class="need_help three columns">
-      <li>Contact Center</li>
-      <li>customer@2tr.com</li>
-    </ul>
-    <ul class="about_2tr three columns">
-      <li>In the Press</li>
-      <li>Jobs</li>
-    </ul>
-    <ul class="top_cities three columns">
+  <div class="need_help three columns">
+    <h6 class="docs-header">Contact Center</h6>
+    <li>customer@2tr.com</li>
+  </div>
 
-      <li>San Francisco</li>
-      <li>Vancouver</li>
-      <li>Hawaii</li>
-    </ul>
+  <div class="about_2tr three columns">
+    <h6 class="docs-header">About 2tr</h6>
+    <li>In the Press</li>
+    <li>Jobs</li>
+  </div>
 
-  </footer>
+  <div class="top_cities three columns">
+    <h6 class="docs-header">Top Cities</h6>
+    <li>San Francisco</li>
+    <li>Vancouver</li>
+    <li>Hawaii</li>
+  </div>
+</footer>
+
 
