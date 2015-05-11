@@ -19,6 +19,12 @@ class UsersController < ApplicationController
     @tutors = User.where(user_type: 2)
   end
 
+  def show
+    @user = User.find(current_user.id)
+    @reviews = Review.where(reviewee_id: @user.id)
+    render :profile_show
+  end
+
   def video
   end
 end
