@@ -4,7 +4,7 @@
    <% if user_signed_in? %>
    <% if session[:linkedin_token].nil? %>
    <div class="logged_in">
-     <a href=''>Welcome <%= current_user.email %></a>
+     Welcome <%= link_to current_user.email, profile_path(current_user) %>
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
    </div>
    <% else %>
