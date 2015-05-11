@@ -44,14 +44,11 @@
   width: 45%;
   text-align: center;
 }
-.u-cf {
-  content: "";
-  display: table;
-  clear: both; }
 
 footer {
-  height: 100px;
-  background-color:
+  height: 50px;
+  background-color;
+  float: right;
 }
 
 .learn_more {
@@ -66,3 +63,17 @@ footer {
 .top_cities {
 
 }
+
+.box {
+  width: 100px;
+  height: 25px;
+  border: 3px solid black;
+  padding-bottom: 5px;
+
+}
+
+li {
+  list-style: none;
+}
+
+
