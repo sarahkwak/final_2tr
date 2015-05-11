@@ -1,16 +1,21 @@
-<h2>Sign up</h2>
+<h2>Application</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :Name %><br />
+    <%= f.label :first_name, "First Name" %><br />
     <%= f.text_field :first_name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :Description %><br />
-    <%= f.text_field :description, autofocus: true %>
+    <%= f.label :url, "Image URL" %><br />
+    <%= f.text_field :url, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :availability, "Your Availability" %><br />
+    <%= f.text_field :availability, autofocus: true %>
   </div>
 
   <div class="field">
@@ -30,6 +35,18 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+
+  <%= f.radio_button :user_type, 1 %>
+  <%= f.label :user_type, 'Student', :value => 1 %>
+  <%= f.radio_button :user_type, 2 %>
+  <%= f.label :user_type, 'Tutor', :value => 2 %>
+
+  <div class="field">
+    <%= f.label :description, "Introduce Yourself" %><br />
+    <%= f.text_field :description, autofocus: true %>
+  </div>
+
 
   <div class="actions">
     <%= f.submit "Sign up" %>
