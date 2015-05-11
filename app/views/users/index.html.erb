@@ -1,23 +1,25 @@
-<div class="container">
+<div class="top-container">
   <title>2TR Online Learning Can be Easier</title>
-  <nav class="container">
-    <div class="logo three columns">Logo</div>
-    <div class="search three columns" id="tutor_login"><%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %></div>
-    <div id="user_nav" class="u-pull-right">
+    <div id="user_nav" >
      <% if user_signed_in? %>
           <% if session[:linkedin_token].nil? %>
-              Welcome <%= current_user.email %>
+              <div class="logged_in">
+               <a href=''>Welcome <%= current_user.email %></a>
                <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+              </div>
           <% else %>
+              <div class="logged_in">
+               <a href=''>Welcome <%= current_user.email %></a>
                <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
-               Welcome <%= current_user.email %>
           <% end %>
       <% else %>
-        <%= link_to "📚 Log In", new_user_session_path, method: :get %>
+        <div id="not_logged_in">
+        <%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %>
+        <%= link_to "📚 Log In", new_user_session_path, method: :get%>
         <%= link_to "📖 Sign Up", new_user_registration_path, method: :get %>
+        </div>
      <% end %>
     </div>
-  </nav>
 
   <body>
 </div>

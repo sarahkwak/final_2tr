@@ -1,3 +1,26 @@
+div {
+  /*border: 5px dotted black;*/
+}
+
+#user_nav {
+  text-align: center;
+  background-color: rgb(217, 101, 76);
+  padding: .8%;
+  border-radius: 10px 10px 0 0;
+}
+
+#user_nav #not_logged_in a {
+  margin: 13.2%;
+  text-decoration: none;
+  color: black;
+}
+
+#user_nav .logged_in a{
+  margin: 20%;
+  text-decoration: none;
+  color: black;
+}
+
 .hero {
   background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");
   background-size: 100%;
