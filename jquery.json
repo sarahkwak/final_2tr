@@ -1,0 +1,44 @@
+{
+  "jQuery": [
+    {
+      "title": "Introduction to jQuery",
+      "url": "http://teamtreehouse.com/library/jquery-basics/introduction-to-jquery/jquery-basics-overview",
+      "description": "In this stage we'll cover the whys, whats and hows of jQuery. You'll learn why you would want to use jQuery, what jQuery is and how to include it in your projects."
+    },
+    {
+      "title": "Creating a Spoiler Revealer",
+      "url": "http://teamtreehouse.com/library/jquery-basics/creating-a-spoiler-revealer/preparation",
+      "description": "Have you ever had something spoilt by an online article? It doesn't have to be like that. Learn how to create a spoiler revealer on your site with jQuery."
+    },
+    {
+      "title": "Creating a Simple Lightbox",
+      "url": "http://teamtreehouse.com/library/jquery-basics/creating-a-simple-lightbox/preparation",
+      "description": "Image galleries don't need to be plain and boring. Instead of sending users to a dead end that they have to get back from, learn how to create a lightbox overlay for an image gallery with jQuery."
+    },
+    {
+      "title": "Creating a Mobile Drop Down Menu",
+      "url": "http://teamtreehouse.com/library/jquery-basics/creating-a-mobile-drop-down-menu/preparation",
+      "description": "Desktop navigation isn't optimized for the mobile screen. We'll turn a traditional menu in to a mobile friendly one by creating a simple drop down menu with jQuery."
+    },
+    {
+      "title": "Creating a Password Confirmation Form",
+      "url": "http://teamtreehouse.com/library/jquery-basics/creating-a-password-confirmation-form/preparation",
+      "description": "Giving useful feedback to users when they need it gives a better user experience. Learn how to use keyboard events in jQuery to compare passwords in two fields and show hints if they don't match."
+    },
+    {
+      "title": "Creating a Simple Drawing Application",
+      "url": "http://teamtreehouse.com/library/jquery-basics/creating-a-simple-drawing-application/preparation",
+      "description": "HTML5 came with an array of new elements such as the canvas element. Learn how to use mouse events with jQuery to create a simple drawing application."
+    },
+    {
+      "title": "CodeAcademy - JQuery",
+      "url": "http://www.codecademy.com/en/tracks/jquery",
+      "description": "Learn how to make your websites interactive and create animations by using jQuery."
+    },
+    {
+      "title": "Try JQuery",
+      "url": "http://try.jquery.com/",
+      "description": "Learn the basic building blocks of jQuery."
+    }
+  ]
+}
