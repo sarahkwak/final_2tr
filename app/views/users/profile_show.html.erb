@@ -1,0 +1,19 @@
+ <h2> Hello <%= @user.first_name %></h2>
+
+ <h3>About <%= @user.first_name %></h3>
+  <img src="<%=@user.url%>">
+  Email: <%= @user.email %>
+  Description: <%= @user.description %>
+
+
+  <h2><%= @user.first_name %>'s Reviews</h2>
+  <div class="review-container">
+    <% @reviews.each do |review| %>
+      <div class="review">
+       Review: <%= review.content %>
+       Review Rating: <%= review.rating %>
+      </div>
+    <% end %>
+  </div>
+
+  <button class="review" id="<%= @user.id %>">Leave Review for <%= @user.first_name %></button>
