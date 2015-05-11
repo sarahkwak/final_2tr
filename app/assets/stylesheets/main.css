@@ -1,27 +1,48 @@
- .grid-container {
-    width : 100%;
-    max-width : 1200px;
-}
 .hero {
   background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px;
+  height: 450px;
+}
+.value-prop {
+  width: 30%;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
 }
 .how_to {
+  /*background-color: #eee;*/
+  height: 300px;
+}
+.how_to_1 {
+  width: 300px;
+}
+.how_to_2 {
+  width: 300px;
+}
+.how_to_3 {
+  width: 300px;
+}
+.main-container {
   background-color: #eee;
-  height: 500px;
 }
 .curriculum {
   position: relative;
   float: left;
-  height: 500px;
+  height: 300px;
+  width: 45%;
+  text-align: center;
 }
 .tutor_list {
   position: relative;
   float: right;
-  height: 500px;
+  width: 45%;
+  text-align: center;
 }
 
 footer {

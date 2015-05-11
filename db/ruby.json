@@ -1,0 +1,44 @@
+{
+  "ruby": [
+    {
+      "title": "How Ruby Works",
+      "url": "https://teamtreehouse.com/library/ruby-basics/how-ruby-works/the-ruby-programming-language"
+      ,"description": "Ruby is a simple but powerful programming language that can be used to make all kinds of programs. In \"How Ruby Works,\" we’ll learn the rules for creating ruby programs and then practice those rules and run our programs."
+    },
+    {
+      "title": "Ruby Strings",
+      "url": "https://teamtreehouse.com/library/ruby-basics/ruby-strings/what-are-strings"
+      ,"description": "Strings are a basic Ruby type that allow us to work with text. In this stage, we'll learn all about how to create and work with strings in Ruby."
+    },
+    {
+      "title": "Ruby Numbers",
+      "url": "https://teamtreehouse.com/library/ruby-basics/ruby-numbers/ruby-numbers"
+      ,"description": "Numbers are basic type in any programming languages. In the Ruby Numbers badge, we'll start working with numbers and use IRB as a simple calculator."
+    },
+    {
+      "title": "Ruby Methods",
+      "url": "https://teamtreehouse.com/library/ruby-basics/methods/methods-in-ruby"
+      ,"description": "Methods, sometimes called functions, are a named series of statements that perform a specific task. In this stage, we'll learn how to create and work with our own methods."
+    },
+    {
+      "title": "Try Ruby",
+      "url": "https://www.codeschool.com/courses/try-ruby"
+      ,"description": "Learn the basic building blocks of Ruby, all in the browser."
+    },
+    {
+      "title": "Ruby on Rails - RAILS FOR ZOMBIES REDUX",
+      "url": "https://www.codeschool.com/courses/rails-for-zombies-redux"
+      ,"description": "Learn Ruby on Rails, an open-source framework for the Ruby programming language. Rails for Zombies will teach you all the Rails basics with a zombie flair."
+    },
+    {
+      "title": "Testing with RSPEC",
+      "url": "https://www.codeschool.com/courses/testing-with-rspec"
+      ,"description": "Learn to use this trusted testing framework for Ruby applications. Brush up on testing best practices with our Testing with RSpec course."
+    },
+    {
+      "title": "Ruby Essential Trainning",
+      "url": "http://www.lynda.com/Ruby-tutorials/essential-training/47905-2.html?utm_source=google&utm_medium=cpc&utm_campaign=l1-US-Search-Dev-Ruby&cid=l1-us:en:ps:lp:prosc:s50:303:all:google:xct-ruby_tutorial&utm_content=64967619666&utm_term=ruby%20tutorial&gclid=Cj0KEQjw4LaqBRD60pfSn43ZwLQBEiQAJv5FLAH13Q4Cn8drcIcMmFDJC3-pngsoa0C8vcIAk5Rr4AgaApyw8P8HAQ"
+      ,"description": "In Ruby Essential Training, expert instructor Kevin Skoglund teaches the fundamentals of Ruby, the popular object-oriented open-source programming language. Kevin begins by walking through the basic data types, demonstrating Ruby's control structures (loops, iterators, conditionals, and code blocks) and showcasing the elegant syntax structure of the language. Kevin explains variable scope and shows how to use methods, arguments, and return values to write efficient code. After covering the fundamentals, Kevin focuses on Ruby's object-oriented features. He shows how to define classes and explores OOP concepts, including instances, attributes, access control, and inheritance. Exercise files accompany the course."
+    }
+  ]
+}

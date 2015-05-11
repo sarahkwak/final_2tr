@@ -8,17 +8,6 @@
   <script src="http://cdn.cine.io/cineio-peer.js"></script>
 </head>
 <body>
-  <div id="user_nav">
-     <% if user_signed_in? %>
-          <% if session[:linkedin_token].nil? %>
-              Welcome <%= current_user.email %>
-               <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-          <% else %>
-               <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
-               Welcome <%= current_user.email %>
-          <% end %>
-     <% end %>
-</div>
 
 <%= yield %>
 
