@@ -101,6 +101,14 @@ footer {
   color: white;
 }
 
+.test {
+  display: inline-block;
+  width: 30vw;
+}
+
+.question_button {
+  color: black;
+}
 
 
 
