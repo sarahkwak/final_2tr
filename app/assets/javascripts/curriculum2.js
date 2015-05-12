@@ -11,7 +11,7 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 6){
-        var course = $('<a href=' + response.url +'>' + response[i].title + '</a><br>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
         ul.append(course);
         i++;
       }
@@ -37,7 +37,7 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 16){
-        var course = $('<a href=' + response.url +'>' + response[i].title + '</a><br>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
         ul.append(course);
         i++;
       }
@@ -63,7 +63,7 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 8){
-        var course = $('<a href=' + response.url +'>' + response[i].title + '</a><br>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
         ul.append(course);
         i++;
       }
@@ -90,7 +90,7 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 3){
-        var course = $('<a href=' + response.url +'>' + response[i].title + '</a><br>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
         ul.append(course);
         i++;
       }
@@ -105,4 +105,30 @@ $(document).ready(function() {
     })
   })
 
+$('#sublime').on("click", function(evt) {
+    evt.preventDefault();
+    debugger;
+    $.ajax({
+      url: '/curriculums/subl',
+      type: 'GET'
+    })
+    .done(function(response) {
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
+        ul.append(course);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 }) // ready

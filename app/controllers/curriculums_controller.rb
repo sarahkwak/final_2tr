@@ -22,9 +22,13 @@ end
 
 def git
   @git = Curriculum.where(curriculum_type: "Git")
-  p "*" * 100
-    p "hello world!!!"
   render json: @git
 end
 
+def subl
+  @subl = Curriculum.where(curriculum_type: "Sublime")
+  p "*" * 100
+  p @subl
+  render json: @subl
+end
 end

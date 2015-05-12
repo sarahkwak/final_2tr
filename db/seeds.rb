@@ -91,3 +91,17 @@ while i< parsed_data['SQL'].length
   curriculum.save
   i+=1
 end
+
+subl_data = File.read('subl.json')
+parsed_data = JSON.parse(subl_data)
+parsed_data['Sublime']
+i = 0
+while i< parsed_data['Sublime'].length
+  curriculum = Curriculum.new
+  curriculum.url = parsed_data['Sublime'][i]['url']
+  curriculum.description = parsed_data['Sublime'][i]['description']
+  curriculum.title = parsed_data['Sublime'][i]['title']
+  curriculum.curriculum_type = "Sublime"
+  curriculum.save
+  i+=1
+end
