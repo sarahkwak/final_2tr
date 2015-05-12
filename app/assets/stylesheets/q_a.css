@@ -1,0 +1,45 @@
+.header-container {
+  text-align: center;
+}
+
+.form-container {
+  margin-top: 2.5%;
+  text-align: center;
+  background-color: white;
+  opacity: .6;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.screen {
+  background-image: url("https://download.unsplash.com/photo-1421757295538-9c80958e75b0");
+  height: 2000px;
+}
+
+.question {
+  background-color: white;
+  opacity: .7;
+  width: 70%;
+  margin-left: 14%;
+}
+
+.category {
+    font-size: 1000%;
+    color: white;
+
+}
+
+ p.form_p {
+  font-size: 250%;
+
+ }
+
+
+ button.show-answers {
+   margin-left: 45%;
+ }
+
+
+ /*button.new-answers {
+  margin-left: auto;
+ }*/
