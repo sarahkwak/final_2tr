@@ -1,4 +1,3 @@
-// Create an immediately invoked functional expression to wrap our code
 (function() {
 
   // Define our constructor
@@ -17,8 +16,8 @@
       className: 'fade-and-drop',
       closeButton: true,
       content: "",
-      maxWidth: 600,
-      minWidth: 280,
+      maxWidth: 1000,
+      minWidth: 1000,
       overlay: true
     }
 

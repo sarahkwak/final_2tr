@@ -117,7 +117,9 @@
 
 .scotch-modal.fade-and-drop.scotch-open
 {
-    top: 50%;
+    top: 100%;
+    opacity: .8;
+    background-color: rgba(217, 101, 76, .2);
 
     -webkit-transition: 500ms top 500ms ease;
        -moz-transition: 500ms top 500ms ease;

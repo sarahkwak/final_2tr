@@ -78,8 +78,10 @@
     <% end %>
   </div>
 
-  <button class="review" id="<%= @user.id %>">Leave Review for <%= @user.first_name %>
-  </button>
+  <% if !current_user %>
+    <button class="review" id="<%= @user.id %>">Leave Review for <%= @user.first_name %>
+    </button>
+  <% end %>
 
   <div class='back_button'>
     <%= link_to "Back", :back %>

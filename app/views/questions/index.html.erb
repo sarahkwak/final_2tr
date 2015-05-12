@@ -1,12 +1,46 @@
-<h1>Questions</h1>
+<div class="profile-container">
+  <div id="user_nav" >
+   <div class="logged_in">
+    <div class="logged_in_nav">
+     Welcome <%= current_user.email %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Profile", profile_path(current_user) %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Find a tutor", tutors_path %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    </div>
+   </div>
+  </div>
+</div>
 
-<%= form_for @question, url: questions_path do |f| %>
-  <p><%= f.label :title %></p>
-  <p><%= f.text_field :title %></p>
-  <p><%= f.label :content %></p>
-  <p><%= f.text_field :content %></p>
-  <%= f.submit %>
-<% end %>
+<div class="screen">
+
+<div class="screen_form_container">
+  <div class="header-container">
+    <h1 class='category'>Questions</h1>
+  <div class="form-container ">
+  </div>
+
+    <%= form_for @question, url: questions_path do |f| %>
+      <p class="form_p"><%= f.label :title %></p>
+      <p class="form_p"><%= f.text_field :title %></p>
+      <p class="form_p"><%= f.label :content %></p>
+      <p class="form_p"><%= f.text_field :content %></p>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+  </div>
+
+
+
+
+
+
 
 <script id="question-template" type="text/x-handlebars-template">
   <div class="question" id={{ id }}>
@@ -42,4 +76,7 @@
     <input type="submit" value="Add answer" >
   </form>
 </div>
+</div>
+<BR>
+
 
