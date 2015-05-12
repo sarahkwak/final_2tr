@@ -20,6 +20,7 @@ Rails.application.routes.draw do
    get '/curriculums/angular' => 'curriculums#angular', as: 'curriculums_angular'
    get '/curriculums/sql' => 'curriculums#sql', as: 'curriculums_sql'
    get '/curriculums/git' => 'curriculums#git', as: 'curriculums_git'
+    get '/curriculums/subl' => 'curriculums#subl', as: 'curriculums_subl'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
