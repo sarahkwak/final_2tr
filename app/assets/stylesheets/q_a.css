@@ -1,12 +1,9 @@
 /*.header-container {
   text-align: center;
 }*/
-
-
-
 .hero-container {
   background-image: url("https://download.unsplash.com/photo-1421757295538-9c80958e75b0");
-  height: 1500px;
+  /*height: 1500px;*/
   opacity: .8;
 }
 
@@ -43,25 +40,25 @@ textarea {
 
 #title {
   margin-left: 40%;
-  font-size: 100px;
+  /*font-size: 100px;*/
   color: white;
 }
 
 #content {
   margin-left: 2%;
-  font-size: 100px;
+  /*font-size: 100px;*/
   color:white;
 }
 
 
 .category_1 {
-  font-size: 300px;
+  /*font-size: 300px;*/
   /*float: left*/
   color: white;
 }
 
 .category_2 {
-  font-size: 250px;
+  /*font-size: 250px;*/
   /*float: right;*/
     color: white;
 
@@ -86,4 +83,28 @@ textarea {
 
 .show-answers {
   margin-left: 40%;
+}
+
+.hidden {
+  display: none;
+}
+
+.user {
+  border: 1px solid black;
+  width: 40%;
+}
+
+.user p {
+  display: inline-block;
+}
+
+.user img {
+  width: 100px;
+  height: 100px;
+}
+
+.review {
+  border: 1px solid black;
+  width: 40%;
+  padding: 1%;
 }

@@ -16,7 +16,7 @@ div {
 }
 
 #user_nav .logged_in a{
-  margin: 10%;
+  /*margin: 5%;*/
 
   text-decoration: none;
   color: black;
@@ -131,7 +131,7 @@ footer {
 
 .question_button {
   color: black;
-  margin: 5px;
+  margin: 20px;
 }
 
 .side_log {
@@ -140,7 +140,7 @@ footer {
 
 .logged_in_nav {
   display: inline-block;
-  width: 23vw;
+  width: 18vw;
 }
 
 /* Large Devices, Wide Screens */
