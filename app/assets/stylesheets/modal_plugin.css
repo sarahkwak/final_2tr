@@ -118,7 +118,7 @@
 .scotch-modal.fade-and-drop.scotch-open
 {
     top: 45%;
-    opacity: .9;
+    opacity: .8;
     /*background-color: rgba(217, 101, 76, .2);*/
     background: white;
 
@@ -178,15 +178,28 @@
 }
 
 .linkListing {
-    /*margin-left: 30%;*/
-    /*text-align: center;*/
     border: 1px solid black;
-    color: black;
     width: 100%;
-    /*position: relative;*/
+    background-color: rgba(217, 101, 76, .2);
+    text-align: center;
+    margin-bottom: 0;
 }
 
 
 li {
     list-style: none;
+    text-align: center;
+}
+
+a {
+    /*margin-left: 5%;*/
+}
+
+.linkListing a {
+    color:black;
+
+}
+
+.linkListing a:hover{
+    color:red;
 }
