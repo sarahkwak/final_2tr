@@ -171,27 +171,32 @@
 </div>
 
 <div class="hero"></div>
+  <% if user_signed_in? %>
 
-<div class="how_to">
-  <div class="how_to_1 four columns value-prop">
-    <p>Log in or Sign in as a Student/Tutor</p>
-    <div class= 'image'>
-      <%= image_tag("Image1.jpg") %>
+  <% else %>
+
+    <div class="how_to">
+      <div class="how_to_1 four columns value-prop">
+        <p>Log in or Sign in as a Student/Tutor</p>
+        <div class= 'image'>
+          <%= image_tag("Image1.jpg") %>
+        </div>
+      </div>
+      <div class="how_to_2 four columns value-prop">
+        <p>Enjoy courses we carefully selected</p>
+        <div class= 'image'>
+        <%= image_tag("Image3.jpg") %>
+        </div>
+      </div>
+      <div class="how_to_3 four columns value-prop">
+        <p>Questions? Connect with one of our tutors</p>
+        <div class= 'image'>
+          <%= image_tag("Image2.jpg") %>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="how_to_2 four columns value-prop">
-    <p>Enjoy courses we carefully selected</p>
-    <div class= 'image'>
-    <%= image_tag("Image3.jpg") %>
-    </div>
-  </div>
-  <div class="how_to_3 four columns value-prop">
-    <p>Questions? Connect with one of our tutors</p>
-    <div class= 'image'>
-      <%= image_tag("Image2.jpg") %>
-    </div>
-  </div>
-</div>
+  <% end %>
+
 
 <div class="main-container">
   <div class="curriculum" id="html">
