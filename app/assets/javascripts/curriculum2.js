@@ -10,9 +10,12 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
+
       while (i < 6){
+        var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
-        ul.append(course);
+        linkListing.append(course);
+        ul.append(linkListing);
         i++;
       }
       var myModal = new Modal({
@@ -107,12 +110,12 @@ $(document).ready(function() {
 
 $('#sublime').on("click", function(evt) {
     evt.preventDefault();
-    debugger;
     $.ajax({
       url: '/curriculums/subl',
       type: 'GET'
     })
     .done(function(response) {
+      console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
