@@ -34,8 +34,8 @@ class UsersController < ApplicationController
 
   def invite
     @user = User.find(params[:id])
-    UserMailer.chat_invitation(@user).deliver_now
-    UserMailer.chat_invitation(current_user).deliver_now
+    UserMailer.chat_invitation(@user).deliver
+    UserMailer.chat_invitation(current_user).deliver
     render json: nil
   end
 end
