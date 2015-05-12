@@ -4,50 +4,111 @@
    <% if user_signed_in? %>
    <% if session[:linkedin_token].nil? %>
    <div class="logged_in">
-     <a href=''>Welcome <%= current_user.email %></a>
+    <div class="logged_in_nav">
+     Welcome <%= current_user.email %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Profile", profile_path(current_user) %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Find a tutor", tutors_path %>
+   </div>
+   <div class="logged_in_nav">
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
    </div>
-   <% else %>
-   <div class="logged_in">
-     <a href=''>Welcome <%= current_user.email %></a>
+ </div>
+ <% else %>
+ <div class="logged_in">
+   <div class="logged_in_nav">
+     Welcome <%= current_user.email %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Profile", profile_path(current_user) %>
+   </div>
+   <div class="logged_in_nav">
+     <%= link_to "Find a tutor", tutors_path %>
+   </div>
+   <div class="logged_in_nav">
      <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
-     <% end %>
-     <% else %>
-     <div id="not_logged_in">
-      <%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %>
-      <%= link_to "📚 Log In", new_user_session_path, method: :get%>
-      <%= link_to "📖 Sign Up", new_user_registration_path, method: :get %>
-    </div>
-    <% end %>
+   </div>
+ </div>
+ <% end %>
+ <% else %>
+ <div id="not_logged_in">
+  <div class="test">
+    <%= link_to "✒ Become a Tutor", new_user_registration_path, method: :get %>
+  </div>
+  <div class="test">
+    <a class="login">📚 Log In</a>
+  </div>
+  <div class="test">
+    <a class="signup">📖 Sign Up</a>
+  </div>
+</div>
+<% end %>
+</div>
+
+<div class="signup-render">
+  <h2>Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="login-render">
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-    <% end -%>
-
-    <div class="actions">
-      <%= f.submit "Log in" %>
-    </div>
-    <% end %>
-
-    <%= render "users/shared/links" %>
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", :class => "side_log" %>
+  </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>
+
+<div class="login-render">
+  <h2>Login</h2>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+  <div class="field">
+    <%= f.check_box :remember_me %>
+    <%= f.label :remember_me %>
+  </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in", :class => "side_log" %>
+  </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>
+
 </div>
 
 <div class="hero"></div>
@@ -68,72 +129,73 @@
 </div>
 
 <div class="main-container">
-  <div class="curriculum">
+  <div class="curriculum" id="html">
     <ul>
-      <li>HTML</li>
+      <li>HTML/CSS</li>
     </ul>
   </div>
-  <div class="curriculum">
-    <ul>
-      <li>CSS</li>
-    </ul>
-  </div>
-  <div class="curriculum">
+  <div class="curriculum" id="javascript">
     <ul>
       <li>Javascript</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="angular">
     <ul>
-      <li>jQuery</li>
+      <li>Angular</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="react">
     <ul>
-      <li>PHP</li>
+      <li>React</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="python">
     <ul>
       <li>Python</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="git">
     <ul>
-      <li>HTML</li>
+      <li>GIT</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="ruby">
     <ul>
-      <li>CSS</li>
+      <li>Ruby</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="obj-c">
     <ul>
-      <li>angular.js</li>
+      <li>Obj C</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="mongo">
     <ul>
-      <li>react.js</li>
+      <li>Mongo DB</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="jquery">
     <ul>
-      <li>coffee.js</li>
+      <li>jQuery</li>
     </ul>
   </div>
-  <div class="curriculum">
+  <div class="curriculum" id="sublime">
     <ul>
-      <li>git</li>
+      <li>Sublime</li>
     </ul>
   </div>
+  <div class="curriculum" id="sql">
+    <ul>
+      <li>SQL</li>
+    </ul>
+  </div>
+  <%= button_to "Already Have A Question?", questions_path, method: :post, :class => "question_button" %>
 </div>
 <footer>
   <div class="learn_more three columns">
     <h6 class="docs-header">Learn More</h6>
     <li>Read our Blog</li>
-    <li>How 2Tr works?</li>
+    <li>How 2tr works?</li>
   </div>
 
   <div class="need_help three columns">
@@ -151,7 +213,7 @@
     <h6 class="docs-header">Top Cities</h6>
     <li>San Francisco</li>
     <li>Vancouver</li>
-    <li>Hawaii</li>
+    <li>Honolulu</li>
   </div>
 </footer>
 

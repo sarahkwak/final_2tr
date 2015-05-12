@@ -1,0 +1,65 @@
+/*.profile-edit {
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border-color: #ddd;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.profile-img {
+  max-width: 150px;
+}
+.user-detail {
+  max-width: 400px;
+}
+
+.user-profile {
+  background-color: #fff;
+  border-color: #ddd;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+}*/
+
+.profile-edit {
+  background-image: url("https://ununsplash.imgix.net/19/desktop.JPG?fit=crop&fm=jpg&h=700&q=75&w=1050");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+  opacity: .6;
+}
+
+.profile-welcome {
+  margin-left: 20%;
+  padding-top: 4%;
+  color: black;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.profile-welcome2 {
+  margin-left: 37%;
+  /*padding-top: 2%;*/
+  color: black;
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.edit-profile {
+  background-color: rgba(0, 0, 0, .2);
+  /*display:none;*/
+  width:400px;
+  padding: 15px;
+  display: none;
+}
+
+
+/*  <div class="rating">
+    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+  </div>*/
+
+
+
+

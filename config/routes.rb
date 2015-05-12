@@ -15,6 +15,13 @@ Rails.application.routes.draw do
    get '/video' => 'users#video'
    post '/users/:id/reviews' => 'reviews#create'
    get '/profile/:id' => 'users#show', as: 'profile'
+   get '/curriculums/ruby' => 'curriculums#ruby', as: 'curriculums_ruby'
+   get '/curriculums/jquery' => 'curriculums#jquery', as: 'curriculums_jquery'
+   get '/curriculums/angular' => 'curriculums#angular', as: 'curriculums_angular'
+   get '/curriculums/sql' => 'curriculums#sql', as: 'curriculums_sql'
+   get '/curriculums/git' => 'curriculums#git', as: 'curriculums_git'
+    get '/curriculums/subl' => 'curriculums#subl', as: 'curriculums_subl'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

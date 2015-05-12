@@ -5,10 +5,14 @@ class UsersController < ApplicationController
   end
 
   def signature
-    client = CineIo::Client.new(secretKey: ENV['CINE_IO_SECRET_KEY'])
-    identity = current_user.id
-    response = client.peer.generate_identity_signature(identity)
-    render json: response
+    if current_user
+      client = CineIo::Client.new(secretKey: ENV['CINE_IO_SECRET_KEY'])
+      identity = current_user.id
+      response = client.peer.generate_identity_signature(identity)
+      render json: response
+    else
+      render json: nil
+    end
   end
 
   def students

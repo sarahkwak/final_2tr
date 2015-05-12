@@ -16,7 +16,8 @@ div {
 }
 
 #user_nav .logged_in a{
-  margin: 20%;
+  margin: 10%;
+
   text-decoration: none;
   color: black;
 }
@@ -26,7 +27,7 @@ div {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 450px;
+  height: 604px;
 }
 .value-prop {
   width: 30%;
@@ -80,6 +81,42 @@ footer {
 }
 
 .login-render {
-  display: none
+  position: absolute;
+  background-color: rgba(150, 54, 54, 0.5);
+  padding: 20px;
+  display: none;
+}
+
+.signup-render {
+  position: absolute;
+  background-color: rgba(150, 54, 54, 0.5);
+  padding: 20px;
+  display: none;
+}
+
+.field {
+  color: white;
+}
+
+.actions {
+  color: white;
+}
+
+.test {
+  display: inline-block;
+  width: 30vw;
+}
+
+.question_button {
+  color: black;
+}
+
+.side_log {
+  color: white;
+}
+
+.logged_in_nav {
+  display: inline-block;
+  width: 23vw;
 }
 

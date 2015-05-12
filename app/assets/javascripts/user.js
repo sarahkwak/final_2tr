@@ -1,14 +1,19 @@
 $(document).ready(function(){
-  $('.start_video').on('click', function(event){
-    CineIOPeer.init('9cd3947bc9fba6aa761c4edf5b795dc6');
-    var request = $.ajax({
-      url: '/users/signature',
-      type: 'get',
-      dataType: 'json'
-    });
-    request.done(function(serverData) {
+  CineIOPeer.init('9cd3947bc9fba6aa761c4edf5b795dc6');
+  var request = $.ajax({
+    url: '/users/signature',
+    type: 'get',
+    dataType: 'json'
+  });
+  request.done(function(serverData) {
+    if (serverData !== null) {
       CineIOPeer.identify(serverData.identity, serverData.timestamp, serverData.signature);
-    });
+    }
+  });
+  request.fail(function(serverData) {
+    alert("Please log in first to use this feature")
+  });
+  $('.start_video').on('click', function(event){
     event.preventDefault();
     var callId = $(this).attr('id')
     CineIOPeer.call(callId);
