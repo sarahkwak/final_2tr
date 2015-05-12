@@ -5,7 +5,7 @@
    <% if session[:linkedin_token].nil? %>
    <div class="logged_in">
     <div class="logged_in_nav">
-     Welcome <%= current_user.email %>
+     Welcome <%= current_user.first_name || current_user.email %>
    </div>
    <div class="logged_in_nav">
       <%= link_to "Home", root_path %>
@@ -23,7 +23,7 @@
  <% else %>
  <div class="logged_in">
    <div class="logged_in_nav">
-     Welcome <%= current_user.email %>
+     Welcome <%= current_user.first_name || current_user.email %>
    </div>
    <div class="logged_in_nav">
       <%= link_to "Home", root_path %>
@@ -59,7 +59,10 @@
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+  <div class="field">
+    <%= f.label :first_name, "First Name" %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -90,6 +93,7 @@
   <h2>Login</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -102,14 +106,14 @@
 
   <% if devise_mapping.rememberable? -%>
   <div class="field">
-    <%= f.check_box :remember_me %>
-    <%= f.label :remember_me %>
+    <%= f.check_box :remember_me %><%= f.label :remember_me %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
   </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in", :class => "side_log" %>
-  </div>
   <% end %>
 
   <%= render "users/shared/links" %>
@@ -158,7 +162,9 @@
   <%= f.radio_button :user_type, 1 %>
   <%= f.label :user_type, 'Student', :value => 1 %>
   <%= f.radio_button :user_type, 2 %>
-  <%= f.label :user_type, 'Tutor', :value => 2 %>
+  <%= f.label :user_type, 'Tutor', :value => 2 %> <div class="actions">
+    <%= f.submit "Log in", :class => "side_log" %>
+  </div>
 
   <div class="field">
     <%= f.label :description, "Introduce Yourself" %><br />
@@ -242,7 +248,10 @@
   <div class="curriculum" id="sql">
       <strong>SQL</strong>
   </div>
-  <%= button_to "Already Have A Question?", questions_path, method: :get, :class => "question_button" %>
+  <% if user_signed_in? %>
+  <%= button_to "Have A Question?", questions_path, method: :get, :class => "question_button" %>
+  <% else %>
+  <% end %>
 </div>
 
 
