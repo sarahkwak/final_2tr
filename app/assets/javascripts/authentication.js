@@ -13,4 +13,10 @@ $(document).ready(function(){
     event.preventDefault();
     $('.tutor-render').toggle()
   });
+
+  //Edit profile
+  $('.edit_button').on('click', function(event){
+    event.preventDefault();
+    $('.edit-profile').toggle()
+  })
 })
