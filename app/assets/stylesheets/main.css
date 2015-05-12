@@ -31,6 +31,14 @@ div {
   height: 604px;
 }
 
+.main-quote {
+  margin: 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-family: 'Rock Salt', cursive;
+  font-size: 4em;
+  text-align: center;
+}
 .image{
 
 }
@@ -64,9 +72,10 @@ div {
   /*height: 10%;*/
   text-align: center;
   width: 8%;
+  height: 90px;
   display: inline-block;
   border: 1px solid black;
-  margin: 8px;
+  /*margin: px;*/
   padding: 3%;
 }
 .tutor_list {
