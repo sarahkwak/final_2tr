@@ -1,3 +1,5 @@
+
+
 (function() {
 
   // Define our constructor
@@ -17,7 +19,7 @@
       closeButton: true,
       content: "",
       maxWidth: 1000,
-      minWidth: 1000,
+      minWidth: 500,
       overlay: true
     }
 

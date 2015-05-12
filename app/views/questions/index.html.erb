@@ -17,56 +17,65 @@
   </div>
 </div>
 
-<div class="screen">
 
-<div class="screen_form_container">
-  <div class="header-container">
-    <h1 class='category'>Questions</h1>
-  <div class="form-container ">
+
+
+
+<div class="hero-container">
+  <div class="category1">
+    <h1 class='category_1'>Q<br>u<br>e<br>s</h1>t<br>i<br>o<br>n<br>s
   </div>
+ <!--  <div class='category2'>
+    <h1 class='category_2'>t<br>i<br>o<br>n<br>s
+    </div> -->
+  <div class="form">
+        <%= form_for @question, url: questions_path do |f| %>
+          <p class="form_p" id='title'><%= f.label :title %></p>
+          <p class="form_p" id="title_t"><%= f.text_area :title %> </p>
+          <p class="form_p" id="content"><%= f.label :content %></p>
+          <p class="form_p" id="content_t"><%= f.text_area :content %></p>
+          <%= f.submit %>
+        <% end %>
+    </div>
+</div>
 
-    <%= form_for @question, url: questions_path do |f| %>
-      <p class="form_p"><%= f.label :title %></p>
-      <p class="form_p"><%= f.text_field :title %></p>
-      <p class="form_p"><%= f.label :content %></p>
-      <p class="form_p"><%= f.text_field :content %></p>
-      <%= f.submit %>
-    <% end %>
-  </div>
-
-  </div>
-
-
-
-
-
-
-
+<br>
+<div class="handlebars-container">
 <script id="question-template" type="text/x-handlebars-template">
   <div class="question" id={{ id }}>
     <p>{{ title }}</p>
     <p>{{ content }}</p>
     <button class="show-answers">Show Answers</button>
     <button class="new-answer">Add Answer</button>
+
   </div>
+
 </script>
+
 
 <script id="answer-template" type="text/x-handlebars-template">
   <div class="answer" id="/{{ id }}">
     <p>{{ title }}</p>
     <p>{{ content }}</p>
+    <br>
   </div>
 </script>
 
 <div class="questions-container">
+
   <% @questions.each do |question| %>
     <div class="question" id="<%= question.id %>">
+
       <p><%= question.title %></p>
       <p><%= question.content %></p>
+
       <button class="show-answers">Show Answers</button>
       <button class="new-answer">Add Answer</button>
+      <br>
     </div>
+       <br>
   <% end %>
+
 </div>
 
 <div class="form-container hidden">
@@ -77,6 +86,7 @@
   </form>
 </div>
 </div>
-<BR>
+</div>
+
 
 

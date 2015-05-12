@@ -117,9 +117,11 @@
 
 .scotch-modal.fade-and-drop.scotch-open
 {
-    top: 100%;
-    opacity: .8;
-    background-color: rgba(217, 101, 76, .2);
+    top: 45%;
+    opacity: .9;
+    /*background-color: rgba(217, 101, 76, .2);*/
+    background: white;
+
 
     -webkit-transition: 500ms top 500ms ease;
        -moz-transition: 500ms top 500ms ease;
@@ -167,4 +169,24 @@
         -ms-transition: 500ms opacity 500ms ease;
          -o-transition: 500ms opacity 500ms ease;
             transition: 500ms opacity 500ms ease;
+}
+
+.scotch-content a {
+    font-size: 16px;
+    text-decoration: none;
+
+}
+
+.linkListing {
+    /*margin-left: 30%;*/
+    /*text-align: center;*/
+    border: 1px solid black;
+    color: black;
+    width: 100%;
+    /*position: relative;*/
+}
+
+
+li {
+    list-style: none;
 }
