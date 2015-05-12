@@ -8,4 +8,9 @@ $(document).ready(function(){
     event.preventDefault();
     $('.login-render').toggle()
   });
+
+  $('.tutor_button').on('click', function(event){
+    event.preventDefault();
+    $('.tutor-render').toggle()
+  });
 })

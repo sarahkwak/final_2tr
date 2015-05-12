@@ -23,12 +23,18 @@ div {
 }
 
 .hero {
-  background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");
+  /*background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");*/
+  background-image: url("Logo2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right bottom;
   height: 604px;
 }
+
+.image{
+
+}
+
 .value-prop {
   width: 30%;
   margin-top: 1rem;
@@ -88,6 +94,13 @@ footer {
 }
 
 .signup-render {
+  position: absolute;
+  background-color: rgba(150, 54, 54, 0.5);
+  padding: 20px;
+  display: none;
+}
+
+.tutor-render {
   position: absolute;
   background-color: rgba(150, 54, 54, 0.5);
   padding: 20px;
