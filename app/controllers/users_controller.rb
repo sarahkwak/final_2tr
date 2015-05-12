@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user.id)
+    @user = User.find(params[:id])
     @reviews = Review.where(reviewee_id: @user.id)
     render :profile_show
   end
@@ -33,6 +33,9 @@ class UsersController < ApplicationController
   end
 
   def invite
-
+    @user = User.find(params[:id])
+    UserMailer.chat_invitation(@user).deliver_now
+    UserMailer.chat_invitation(current_user).deliver_now
+    render json: nil
   end
 end

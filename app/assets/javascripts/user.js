@@ -13,6 +13,23 @@ $(document).ready(function() {
       });
     });
   });
+  $('.invitation').on('click', function(event) {
+    event.preventDefault();
+    var request = $.ajax({
+      url: '/users/' + $(this).parent().attr('id') + '/invite',
+      type: 'get'
+    });
+    request.done(function(serverData) {
+      var emailModal = new Modal({content:
+        '<p>Link to chat room has been sent to your email</p>',
+        maxWidth: 600
+      });
+      emailModal.open();
+    });
+    request.fail(function(serverData) {
+      alert("Something went wrong");
+    });
+  });
 });
 
 // $(document).ready(function(){
