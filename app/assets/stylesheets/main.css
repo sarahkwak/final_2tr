@@ -72,10 +72,10 @@ div {
   /*height: 10%;*/
   text-align: center;
   width: 8%;
-  height: 90px;
+  /*height: 90px;*/
   display: inline-block;
   border: 1px solid black;
-  /*margin: px;*/
+  margin: 5px;
   padding: 3%;
 }
 .tutor_list {
@@ -131,6 +131,7 @@ footer {
 
 .question_button {
   color: black;
+  margin: 5px;
 }
 
 .side_log {
@@ -142,3 +143,44 @@ footer {
   width: 23vw;
 }
 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .main-container {
+  /*background-color: #eee;*/
+  text-align: center;
+  margin-top: 0;
+  margin-left: 7%;
+  margin-right: 7%;
+}
+  .curriculum {
+    position: relative;
+    /*height: 10%;*/
+    text-align: center;
+    width: 8%;
+    /*height: 90px;*/
+    display: inline-block;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 3%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
