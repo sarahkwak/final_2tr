@@ -171,6 +171,7 @@
 </div>
 
 <div class="hero"></div>
+<div class="main-quote">A Better Way to Learn</div>
   <% if user_signed_in? %>
 
   <% else %>
@@ -200,66 +201,78 @@
 
 <div class="main-container">
   <div class="curriculum" id="html">
-      HTML/CS
+      <strong>HTML/CSS</strong>
+      <p>Basics webpage layout / design</p>
   </div>
   <div class="curriculum" id="javascript">
-      Javascript
+      <strong>Javascript</strong>
+      <p>Interactive webpage</p>
   </div>
   <div class="curriculum" id="angular">
-      Angular
+      <strong>Angular</strong>
+      <p>Data driven application</p>
   </div>
   <div class="curriculum" id="react">
-      React
+      <strong>React</strong>
+      <p>Live reactive application</p>
   </div>
   <div class="curriculum" id="python">
-      Python
+      <strong>Python</strong>
+      <p>Popular backend language</p>
   </div>
   <div class="curriculum" id="git">
-      GIT
+      <strong>Git</strong>
+      <p>Strong version control</p>
   </div>
   <div class="curriculum" id="ruby">
-      Ruby
+      <strong>Ruby</strong>
+      <p>Simple scripting language</p>
   </div>
   <div class="curriculum" id="obj-c">
-      Obj C
+      <strong>ObjiveC</strong>
+      <p>Most popular language of iOS</p>
   </div>
   <div class="curriculum" id="mongo">
-      Mongo DB
+      <strong>Mongo DB</strong>
+      <p>New type of Data Management</p>
   </div>
   <div class="curriculum" id="jquery">
-      jQuery
+      <strong>jQuery</strong>
+      <p>Control element with JS</p>
   </div>
   <div class="curriculum" id="sublime">
-      Sublime
+      <strong>Sublime</strong>
+      <p>Powerful text editor</p>
   </div>
   <div class="curriculum" id="sql">
-      SQL
+      <strong>SQL</strong>
+      <p>Popular database language</p>
   </div>
   <%= button_to "Already Have A Question?", questions_path, method: :get, :class => "question_button" %>
 </div>
 <footer>
   <div class="learn_more three columns">
-    <h6 class="docs-header">Learn More</h6>
-    <li>Read our Blog</li>
-    <li>How 2tr works</li>
+    <h5 class="docs-header">Learn More</h5>
+    <P>Read our Blog</P>
+    <P>How 2tr works</P>
   </div>
 
   <div class="need_help three columns">
-    <h6 class="docs-header">Contact Center</h6>
-    <li>customer@2tr.com</li>
+    <h5 class="docs-header">Contact Center</h5>
+    <P>customer@2tr.com</P>
   </div>
 
   <div class="about_2tr three columns">
-    <h6 class="docs-header">About 2tr</h6>
-    <li>In the Press</li>
-    <li>Jobs</li>
+    <h5 class="docs-header">About 2tr</h5>
+    <P>In the Press</P>
+    <P>Jobs</P>
   </div>
 
   <div class="top_cities three columns">
-    <h6 class="docs-header">Top Cities</h6>
-    <li>San Francisco</li>
-    <li>Vancouver</li>
-    <li>Honolulu</li>
+    <h5 class="docs-header">Top Cities</h5>
+    <P>San Francisco</P>
+    <P>Vancouver</P>
+    <P>Honolulu</P>
   </div>
 </footer>
 
