@@ -1,4 +1,9 @@
-<iframe src="http://deadsimplechat.com/+FpFYr" frameborder="0" width="800px" height="300px"></iframe>
+<a href='#' onclick='login();'>Login with Twitter</a>
+
+<div id='firebase-override'>
+  <div id='firechat-wrapper'>
+  </div>
+</div>
 
 <div class='videoz'>
   <button class="start_video">Start video</button>
@@ -8,4 +13,34 @@
 
 <div class="video-screen">
 </div>
+
+<script>
+// Create a new Firebase reference, and a new instance of the Login client
+var chatRef = new Firebase('https://shining-torch-9209.firebaseio.com/chat');
+
+function login() {
+  chatRef.authWithOAuthPopup("twitter", function(error, authData) {
+    if (error) {
+      console.log(error);
+    }
+  });
+}
+
+chatRef.onAuth(function(authData) {
+  // Once authenticated, instantiate Firechat with our user id and user name
+  if (authData) {
+    initChat(authData);
+  }
+});
+</script>
+
+
+<script>
+function initChat(authData) {
+  var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
+  chat.setUser(authData.uid, authData[authData.provider].displayName);
+}
+</script>
+
+
 
