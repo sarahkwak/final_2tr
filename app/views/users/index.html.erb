@@ -60,12 +60,17 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
   <div class="field">
-    <%= f.label :first_name, "First Name" %><br />
+    <%= f.label :first_name, "First Name*" %><br />
     <%= f.text_field :first_name, autofocus: true %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email, "Email*" %><br />
     <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :url, "Image URL" %><br />
+    <%= f.text_field :url, autofocus: true %>
   </div>
 
   <div class="field">
@@ -93,7 +98,7 @@
   <h2>Login</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+  <%= devise_error_messages! %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -159,12 +164,8 @@
   </div>
 
 
-  <%= f.radio_button :user_type, 1 %>
-  <%= f.label :user_type, 'Student', :value => 1 %>
-  <%= f.radio_button :user_type, 2 %>
-  <%= f.label :user_type, 'Tutor', :value => 2 %> <div class="actions">
-    <%= f.submit "Log in", :class => "side_log" %>
-  </div>
+  <%= f.radio_button :user_type, 1 %><%= f.label :user_type, 'Student', :value => 1 %>
+  <%= f.radio_button :user_type, 2 %><%= f.label :user_type, 'Tutor', :value => 2 %>
 
   <div class="field">
     <%= f.label :description, "Introduce Yourself" %><br />

@@ -36,17 +36,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-
   <%= f.radio_button :user_type, 1 %>
   <%= f.label :user_type, 'Student', :value => 1 %>
   <%= f.radio_button :user_type, 2 %>
-  <%= f.label :user_type, 'Tutor', :value => 2 %> <div class="actions">
-    <%= f.submit "Log in", :class => "side_log" %>
-  </div>
+  <%= f.label :user_type, 'Tutor', :value => 2 %>
 
   <div class="field">
     <%= f.label :description, "Introduce Yourself" %><br />
-    <%= f.text_field :description, autofocus: true %>
+    <%= f.text_area :description, autofocus: true %>
   </div>
 
 
