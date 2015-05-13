@@ -14,7 +14,7 @@ $(document).ready(function() {
 
       while (i < 6){
         var linkListing = $('<li class="linkListing"></li>')
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
         ul.append(linkListing);
         i++;
@@ -42,7 +42,7 @@ $(document).ready(function() {
       var resources = $('<p></p>')
       while (i < 16){
         var linkListing = $('<li class="linkListing"></li>')
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
         ul.append(linkListing);
         i++;
@@ -70,7 +70,7 @@ $(document).ready(function() {
       var resources = $('<p></p>')
       while (i < 8){
         var linkListing = $('<li class="linkListing"></li>')
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
         ul.append(linkListing);
         i++;
@@ -99,7 +99,7 @@ $(document).ready(function() {
       var resources = $('<p></p>')
       while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
         ul.append(linkListing);
         i++;
@@ -128,7 +128,7 @@ $('#sublime').on("click", function(evt) {
       var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
         ul.append(linkListing);
         i++;
