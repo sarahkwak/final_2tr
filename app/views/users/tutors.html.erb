@@ -19,15 +19,15 @@
  </div>
 </div>
 
-
 <div class="user-container">
   <% @tutors.each do |tutor| %>
     <div class="user" id="<%= tutor.id %>">
       <img src="<%= tutor.url %>" alt="Profile">
       <p><%= tutor.first_name %></p>
       <p><%= tutor.description %></p>
-      <button class="invitation">📫 Send chat invitation</button>
-      <%= link_to "Profile", profile_path(tutor) %>
+      <button class="invitation">Send chat invitation</button>
+      <%= button_to "Profile", profile_path(tutor), method: :get %>
     </div>
   <% end %>
+</div>
 </div>
