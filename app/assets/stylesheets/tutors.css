@@ -12,3 +12,12 @@
   width: 100px;
 }
 
+.splash {
+  background-image: url("https://download.unsplash.com/uploads/14120938606568dde6e2b/c9e42240");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 400px;
+  opacity: .8;
+  margin-bottom: 1%;
+}
