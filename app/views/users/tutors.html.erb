@@ -5,7 +5,7 @@
      Welcome <%= current_user.email %>
    </div>
     <div class="logged_in_nav">
-      <%= link_to "Home", root_path %>
+      <%= link_to "🏠 Home", root_path %>
     </div>
    <div class="logged_in_nav">
      <%= link_to "Profile", profile_path(current_user) %>
@@ -26,7 +26,7 @@
       <img src="<%= tutor.url %>" alt="Profile">
       <p><%= tutor.first_name %></p>
       <p><%= tutor.description %></p>
-      <button class="invitation">Send chat invitation</button>
+      <button class="invitation">📫 Send chat invitation</button>
       <%= link_to "Profile", profile_path(tutor) %>
     </div>
   <% end %>
