@@ -78,7 +78,7 @@
     <% @reviews.each do |review| %>
       <div class="review">
         <p>Review: <%= review.content %></p>
-        <p>Review Rating: <%= review.rating %></p>
+        <p>Rating: <%= '⭐' * review.rating %></p>
       </div>
     <% end %>
   </div>
@@ -96,7 +96,7 @@
 
 <script id="review-template" type="text/x-handlebars-template">
   <div class="review">
-    <p>{{ content }}</p>
+    <p>Review: {{ content }}</p>
     <p>{{ rating }}</p>
   </div>
 </script>
