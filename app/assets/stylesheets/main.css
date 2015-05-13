@@ -7,6 +7,9 @@ div {
   background-color: rgba(217, 101, 76, .2);
   padding: .8%;
   border-radius: 10px 10px 0 0;
+  position: fixed;
+  opacity: 1;
+  width: 97.35%;
 }
 
 #user_nav #not_logged_in a {
@@ -16,7 +19,6 @@ div {
 }
 
 #user_nav .logged_in a{
-  /*margin: 5%;*/
 
   text-decoration: none;
   color: black;
@@ -29,6 +31,7 @@ div {
   background-repeat: no-repeat;
   background-position: right bottom;
   height: 604px;
+  padding-top: 30%;
 }
 
 .main-quote {

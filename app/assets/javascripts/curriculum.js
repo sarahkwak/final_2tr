@@ -295,7 +295,6 @@ var ul =$('<ul></ul>')
   });
 
 $('#mongo').on('click', function(event){
-
   var ul =$('<ul></ul>')
   var response_python = $.ajax({
     url:"https://www.kimonolabs.com/api/a0oyohre?apikey=KqO43CQBHYvoDMtlWkXYeXMAa2K0or2M",
@@ -324,10 +323,11 @@ $('#mongo').on('click', function(event){
   });
 
 
+$("body").on("click", "a", function(event){
+  event.preventDefault();
+  window.open(this, "_blank")
+  // debugger
 
 
-
-
-
-
+});
 });
