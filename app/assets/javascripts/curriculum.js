@@ -4,23 +4,23 @@ $(document).ready(function(){
     event.preventDefault();
 
     var ul = $('<ul></ul>');
-    var response_html = $.ajax({
-      url:"https://www.kimonolabs.com/api/a5ezu2ju?apikey=KqO43CQBHYvoDMtlWkXYeXMAa2K0or2M",
-      crossDomain: true,
-      dataType: "jsonp",
-      success: function (response) {
-        var place = 0
-        while (place < 6){
-          var linkListing = $('<li class="linkListing"></li>')
-          var text = response.results['collection2'][place]['Lesson-Links'];
-          linkListing.append(text);
-          ul.append(linkListing);
-          place++;
-        };
-      },
-      error: function (xhr, status) {
-      }
-    });
+    // var response_html = $.ajax({
+    //   url:"https://www.kimonolabs.com/api/a5ezu2ju?apikey=KqO43CQBHYvoDMtlWkXYeXMAa2K0or2M",
+    //   crossDomain: true,
+    //   dataType: "jsonp",
+    //   success: function (response) {
+    //     var place = 0
+    //     while (place < 6){
+    //       var linkListing = $('<li class="linkListing"></li>')
+    //       var text = response.results['collection2'][place]['Lesson-Links'];
+    //       linkListing.append(text);
+    //       ul.append(linkListing);
+    //       place++;
+    //     };
+    //   },
+    //   error: function (xhr, status) {
+    //   }
+    // });
 
     var response_CSS1 = $.ajax({
       url:"https://www.kimonolabs.com/api/9cn5msz6?apikey=KqO43CQBHYvoDMtlWkXYeXMAa2K0or2M",
