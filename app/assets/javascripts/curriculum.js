@@ -324,10 +324,7 @@ $('#mongo').on('click', function(event){
 
 
 $("body").on("click", "a", function(event){
-  event.preventDefault();
-  window.open(this, "_blank")
-  // debugger
-
-
-});
+    event.preventDefault();
+    window.open(this, "_blank")
+  });
 });
