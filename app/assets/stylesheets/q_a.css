@@ -22,7 +22,7 @@
 
 
  p.form_p {
-  font-size: 500%;
+  /*font-size: 500%;*/
   font-style: bold;
  }
 
@@ -39,21 +39,20 @@ textarea {
 }
 
 #title {
-  margin-left: 40%;
+  /*margin-left: 40%;*/
   /*font-size: 100px;*/
   color: white;
 }
 
 #content {
-  margin-left: 2%;
+  /*margin-left: 2%;*/
   /*font-size: 100px;*/
   color:white;
 }
 
 
 .category_1 {
-  /*font-size: 300px;*/
-  /*float: left*/
+  margin: 20px;
   color: white;
 }
 

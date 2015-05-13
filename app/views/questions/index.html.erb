@@ -12,9 +12,9 @@
    </div>
    <div class="logged_in_nav">
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    </div>
    </div>
-  </div>
+ </div>
+</div>
 </div>
 
 <div class="hero-container">
@@ -23,41 +23,41 @@
   </div>
 
   <div class="form">
-        <%= form_for @question, url: questions_path do |f| %>
-          <p class="form_p" id='title'><%= f.label :title %></p>
-          <p class="form_p" id="title_t"><%= f.text_area :title %> </p>
-          <p class="form_p" id="content"><%= f.label :content %></p>
-          <p class="form_p" id="content_t"><%= f.text_area :content %></p>
-          <%= f.submit %>
-        <% end %>
-    </div>
+    <%= form_for @question, url: questions_path do |f| %>
+    <p class="form_p" id='title'><%= f.label :title %></p>
+    <p class="form_p" id="title_t"><%= f.text_area :title %> </p>
+    <p class="form_p" id="content"><%= f.label :content %></p>
+    <p class="form_p" id="content_t"><%= f.text_area :content %></p>
+    <%= f.submit %>
+    <% end %>
+  </div>
 </div>
 
 <br>
 <div class="handlebars-container">
-<script id="question-template" type="text/x-handlebars-template">
+  <script id="question-template" type="text/x-handlebars-template">
   <div class="question" id={{ id }}>
-    <p>{{ title }}</p>
-    <p>{{ content }}</p>
-    <button class="show-answers">Show Answers</button>
-    <button class="new-answer">Add Answer</button>
+  <p>{{ title }}</p>
+  <p>{{ content }}</p>
+  <button class="show-answers">Show Answers</button>
+  <button class="new-answer">Add Answer</button>
 
   </div>
 
-</script>
+  </script>
 
 
-<script id="answer-template" type="text/x-handlebars-template">
+  <script id="answer-template" type="text/x-handlebars-template">
   <div class="answer" id="/{{ id }}">
-    <p>{{ title }}</p>
-    <p>{{ content }}</p>
-    <br>
+  <p>{{ title }}</p>
+  <p>{{ content }}</p>
+  <br>
   </div>
-</script>
+  </script>
 
-<div class="questions-container">
+  <div class="questions-container">
 
-  <% @questions.each do |question| %>
+    <% @questions.each do |question| %>
     <div class="question" id="<%= question.id %>">
 
       <p><%= question.title %></p>
@@ -67,18 +67,18 @@
       <button class="new-answer">Add Answer</button>
       <br>
     </div>
-       <br>
-  <% end %>
+    <br>
+    <% end %>
 
-</div>
+  </div>
 
-<div class="form-container hidden">
-  <form class="new-answer-form">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="content" placeholder="Content">
-    <input type="submit" value="Add answer" >
-  </form>
-</div>
+  <div class="form-container hidden">
+    <form class="new-answer-form">
+      <input type="text" name="title" placeholder="Title">
+      <input type="text" name="content" placeholder="Content">
+      <input type="submit" value="Add answer" >
+    </form>
+  </div>
 </div>
 </div>
 

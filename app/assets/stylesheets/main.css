@@ -98,21 +98,21 @@ footer {
 .login-render {
   position: absolute;
   background-color: rgba(150, 54, 54, 0.5);
-  padding: 20px;
+  padding: 35px;
   display: none;
 }
 
 .signup-render {
   position: absolute;
   background-color: rgba(150, 54, 54, 0.5);
-  padding: 20px;
+  padding: 35px;
   display: none;
 }
 
 .tutor-render {
   position: absolute;
   background-color: rgba(150, 54, 54, 0.5);
-  padding: 20px;
+  padding: 35px;
   display: none;
 }
 
