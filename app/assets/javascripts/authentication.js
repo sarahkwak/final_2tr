@@ -19,4 +19,10 @@ $(document).ready(function(){
     event.preventDefault();
     $('.edit-profile').toggle()
   })
+
+
+
+
+
+
 })

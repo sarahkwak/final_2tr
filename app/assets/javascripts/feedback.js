@@ -19,6 +19,12 @@ $(document).ready(function() {
       request.done(function(serverData) {
         var template = Handlebars.compile($('#review-template').html());
         $('.review-container').append(template(serverData));
+        var numStars = serverData.rating;
+        var stars = " "
+        for(var i=0; i < numStars; i++) {
+          stars += '⭐'
+        }
+        $('.review-container').children().last().find('p').last().text('Rating:' + stars);
       });
       request.fail(function(serverData) {
         console.log('Something went wrong');

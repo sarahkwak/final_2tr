@@ -7,6 +7,9 @@ div {
   background-color: rgba(217, 101, 76, .2);
   padding: .8%;
   border-radius: 10px 10px 0 0;
+  /*display: fixed;*/
+  opacity: 1;
+  width: 97.35%;
 }
 
 #user_nav #not_logged_in a {
@@ -16,7 +19,6 @@ div {
 }
 
 #user_nav .logged_in a{
-  /*margin: 5%;*/
 
   text-decoration: none;
   color: black;
@@ -29,6 +31,7 @@ div {
   background-repeat: no-repeat;
   background-position: right bottom;
   height: 604px;
+  padding-top: 30%;
 }
 
 .main-quote {
@@ -165,6 +168,11 @@ footer {
   }
 }
 
+.re-field {
+  color: black;
+}
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
@@ -184,3 +192,22 @@ footer {
 @media only screen and (max-width : 320px) {
 
 }
+
+
+
+
+
+.linkListing {
+background: #000;
+transition: 0.5s;
+-moz-transition: 0.5s;
+-webkit-transition: 0.5s;
+-o-transition: 0.5s;}
+
+.linkListing:hover {
+background: #778899;
+transition: 0.5s;
+-moz-transition: 0.5s;
+-webkit-transition: 0.5s;
+-o-transition: 0.5s;
+border: 2px solid #4c004c;}

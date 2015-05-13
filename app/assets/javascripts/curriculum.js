@@ -31,7 +31,7 @@ $(document).ready(function(){
         while (place < 19 ){
           var linkListing = $('<li class="linkListing"></li>')
           var text = response.results.collection1[place]["Link-Titles"].text;
-          var a = $('<a href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
+          var a = $('<a class="link" href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
           linkListing.append(a);
           ul.append(linkListing);
           place++;
@@ -50,7 +50,7 @@ $(document).ready(function(){
         while (place < 12 ){
           var linkListing = $('<li class="linkListing"></li>')
           var text = response.results.collection1[place]["Link-Titles"].text;
-          var a = $('<a href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
+          var a = $('<a class="link" href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
           linkListing.append(a);
           ul.append(linkListing);
           place++;
@@ -81,7 +81,7 @@ $(document).ready(function(){
         while (place < 6){
           var linkListing = $('<li class="linkListing"></li>')
           var text = response.results['Lessons'][place]['Titles'].text;
-          var a = $('<a href=' + response.results['Lessons'][place]['Titles'].href + '>'  + text + '</a><br>')
+          var a = $('<a class="link" href=' + response.results['Lessons'][place]['Titles'].href + '>'  + text + '</a><br>')
           linkListing.append(a);
           ul.append(linkListing)
           place++;
@@ -116,7 +116,7 @@ $(document).ready(function(){
           while (place < 19){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results.collection1[place]["Title-Links"].text;
-            var a = $('<a href=' + response.results.collection1[place]["Title-Links"].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results.collection1[place]["Title-Links"].href + '>'  + text + '</a><br>')
             linkListing.append(a);
             ul.append(linkListing);
             place++;
@@ -143,7 +143,7 @@ $('#angular').on('click', function(event){
           while (place < 19){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results.collection1[place]["Link-Titles"].text;
-            var a = $('<a href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
             linkListing.append(a)
             ul.append(linkListing);
             place++;
@@ -163,7 +163,7 @@ $('#angular').on('click', function(event){
           while (place < 18){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results.collection1[place]["Link-Titles"].text;
-            var a = $('<a href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results.collection1[place]["Link-Titles"].href + '>'  + text + '</a><br>')
             linkListing.append(a);
             ul.append(linkListing);
             place++;
@@ -193,7 +193,7 @@ $('#angular').on('click', function(event){
           while (place < 3){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results['collection2'][place]['Lesson-Links'].text;
-            var a = $('<a href=' + response.results['collection2'][place]['Lesson-Links'].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results['collection2'][place]['Lesson-Links'].href + '>'  + text + '</a><br>')
             linkListing.append(a);
             ul.append(linkListing);
             place++;
@@ -223,7 +223,7 @@ $('#angular').on('click', function(event){
           while (place < 19){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results['collection1'][place]['Link-Titles-1'].text
-            var a = $('<a href=' + response.results['collection1'][place]['Link-Titles-1'].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results['collection1'][place]['Link-Titles-1'].href + '>'  + text + '</a><br>')
             linkListing.append(a);
             ul.append(linkListing);
 
@@ -248,7 +248,7 @@ $('#angular').on('click', function(event){
           var resources = $('<p></p>')
           while (place < 10){
             var text = response.results['collection1'][place]['Link-Titles-2'].text;
-            var a = $('<a href=' + response.results['collection1'][place]['Link-Titles-2'].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results['collection1'][place]['Link-Titles-2'].href + '>'  + text + '</a><br>')
             ul.append(a);
             place++;
           };
@@ -277,7 +277,7 @@ var ul =$('<ul></ul>')
           while (place < 24){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results['collection2'][place]['Link-Titles'].text;
-            var a = $('<a href=' + response.results['collection2'][place]['Link-Titles'].href + '>'  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results['collection2'][place]['Link-Titles'].href + '>'  + text + '</a><br>')
             linkListing.append(a)
             ul.append(linkListing);
             place++;
@@ -295,7 +295,6 @@ var ul =$('<ul></ul>')
   });
 
 $('#mongo').on('click', function(event){
-
   var ul =$('<ul></ul>')
   var response_python = $.ajax({
     url:"https://www.kimonolabs.com/api/a0oyohre?apikey=KqO43CQBHYvoDMtlWkXYeXMAa2K0or2M",
@@ -306,7 +305,7 @@ $('#mongo').on('click', function(event){
           while (place < 11){
             var linkListing = $('<li class="linkListing"></li>')
             var text = response.results['collection1'][place]['Title-Links'].text;
-            var a = $('<a href=' + response.results['collection1'][place]['Title-Links'].href + " " + 'class="selection"> '  + text + '</a><br>')
+            var a = $('<a class="link" href=' + response.results['collection1'][place]['Title-Links'].href + " " + 'class="selection"> '  + text + '</a><br>')
             linkListing.append(a)
             ul.append(linkListing);
             place++;
@@ -324,10 +323,8 @@ $('#mongo').on('click', function(event){
   });
 
 
-
-
-
-
-
-
+$("body").on("click", "a.link", function(event){
+    event.preventDefault();
+    window.open(this, "_blank")
+  });
 });
