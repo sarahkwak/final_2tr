@@ -31,6 +31,35 @@
   display: none;
 }
 
+.profile-img {
+  width: 200px;
+  height: 200px;
+  margin-right: 2%;
+}
+
+.edit_button {
+  display: block;
+}
+
+.profile-about {
+  width: 70%;
+  padding: 1%;
+  height: auto;
+}
+
+.back-button {
+  color: black;
+}
+
+.review-container > .review {
+  background-color: Rgba(217, 101, 76, 0.2);
+  font-size: 1.25em;
+  border-radius: 2em;
+  padding: 1%;
+  margin: 1%;
+  width: 60%;
+}
+
 
 
 

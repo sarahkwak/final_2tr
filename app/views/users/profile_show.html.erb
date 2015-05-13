@@ -64,17 +64,17 @@
   <% end %>
 
   <div class='profile-about'>
-    <h3>About <%= @user.first_name %></h3>
-    <div class="user-profile">
-      <img class="profile-img u-pull-left" src="<%=@user.url%>">
-      <h5>Email: <%= @user.email %></h5>
-      <h5>Description: <%= @user.description %></h5>
-    </div>
-    <a class='edit_button'>Edit Profile</a>
+    <h2>About <%= @user.first_name %></h2>
+    <img class="profile-img u-pull-left" src="<%=@user.url%>">
+    <h5>Email: <%= @user.email %></h5>
+    <h5>Description: <%= @user.description %></h5>
+    <% if current_user.id == @user.id %>
+      <button class='edit_button'>Edit Profile</button>
+    <% end %>
   </div>
 
-  <h4><%= @user.first_name %>'s Reviews</h4>
   <div class="review-container">
+    <h4><%= @user.first_name %>'s Reviews:</h4>
     <% @reviews.each do |review| %>
       <div class="review">
         <p>Review: <%= review.content %></p>
@@ -90,7 +90,7 @@
   <% end %>
 
   <div class='back_button'>
-    <%= link_to "Back", :back %>
+    <%= link_to "Back", :back, :class => "back-button" %>
   </div>
 </div>
 
