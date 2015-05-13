@@ -165,6 +165,11 @@ footer {
   }
 }
 
+.re-field {
+  color: black;
+}
+
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
