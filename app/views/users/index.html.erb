@@ -8,7 +8,7 @@
      Welcome <%= current_user.first_name || current_user.email %>
    </div>
    <div class="logged_in_nav">
-      <%= link_to "Home", root_path %>
+      <%= link_to "🏠 Home", root_path %>
    </div>
    <div class="logged_in_nav">
      <%= link_to "Profile", profile_path(current_user) %>
@@ -23,10 +23,10 @@
  <% else %>
  <div class="logged_in">
    <div class="logged_in_nav">
-     Welcome <%= current_user.first_name || current_user.email %>
+     Welcome <%= current_user.first_name.capitalize || current_user.email %>
    </div>
    <div class="logged_in_nav">
-      <%= link_to "Home", root_path %>
+      <%= link_to "🏠 Home", root_path %>
    </div>
    <div class="logged_in_nav">
      <%= link_to "Profile", profile_path(current_user) %>
@@ -42,7 +42,7 @@
  <% else %>
  <div id="not_logged_in">
   <div class="test">
-    <a class='tutor_button' href='/users/sign_up'>✒ Become a Tutor</a>
+    <a class='tutor_button' href='/users/sign_up'>🎓 Become a Tutor</a>
   </div>
   <div class="test">
     <a class="login">📚 Log In</a>
@@ -111,7 +111,7 @@
 
   <% if devise_mapping.rememberable? -%>
   <div class="field">
-    <%= f.check_box :remember_me %><%= f.label :remember_me %>
+    <%= f.label :remember_me %><%= f.check_box :remember_me %>
   </div>
 
   <div class="actions">
@@ -163,13 +163,12 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-
-  <%= f.radio_button :user_type, 1 %><%= f.label :user_type, 'Student', :value => 1 %>
-  <%= f.radio_button :user_type, 2 %><%= f.label :user_type, 'Tutor', :value => 2 %>
+  <%= f.label :user_type, 'I will be an Awesome Tutor!', :value => 2 %>
+  <%= f.radio_button :user_type, 2 %>
 
   <div class="field">
     <%= f.label :description, "Introduce Yourself" %><br />
-    <%= f.text_field :description, autofocus: true %>
+    <%= f.text_area :description, autofocus: true %>
   </div>
 
 
@@ -223,7 +222,7 @@
       <strong>Angular</strong>
   </div>
   <div class="curriculum" id="node">
-      Node
+      <strong>Node</strong>
   </div>
 
   <div class="curriculum" id="python">

@@ -6,8 +6,8 @@
 </div>
 
 <div class='videoz'>
-  <button class="start_video">Start video</button>
-  <button class="end_video">End video</button>
+  <button class="start_video">🔛 Start video</button>
+  <button class="end_video">🔚 End video</button>
   <%= button_to "home", root_path, method: :get %>
 </div>
 
@@ -26,6 +26,13 @@ function login() {
   });
 }
 
+function initChat(authData) {
+  var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
+  chat.setUser(authData.uid, authData[authData.provider].displayName);
+}
+</script>
+
+<script>
 chatRef.onAuth(function(authData) {
   // Once authenticated, instantiate Firechat with our user id and user name
   if (authData) {
@@ -35,12 +42,8 @@ chatRef.onAuth(function(authData) {
 </script>
 
 
-<script>
-function initChat(authData) {
-  var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
-  chat.setUser(authData.uid, authData[authData.provider].displayName);
-}
-</script>
+
+
 
 
 

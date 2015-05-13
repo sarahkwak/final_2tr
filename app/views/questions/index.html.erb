@@ -1,65 +1,79 @@
-<div class="profile-container">
-  <div id="user_nav" >
-   <div class="logged_in">
+<div id="user_nav" >
+ <div class="logged_in">
     <div class="logged_in_nav">
      Welcome <%= current_user.email %>
    </div>
+
    <div class="logged_in_nav">
      <%= link_to "Profile", profile_path(current_user) %>
    </div>
+
    <div class="logged_in_nav">
      <%= link_to "Find a tutor", tutors_path %>
    </div>
+
    <div class="logged_in_nav">
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
    </div>
  </div>
 </div>
-</div>
 
-<div class="hero-container">
-  <div class="category1">
-    <h1 class='category_1'>Question</h1>
+<div class="hero-div">
+  <div class="container">
+    <h4>“Judge a man by his questions rather than by his answers.”</h4>
+    <p>Before starting to fill in question form, you should ask yourself the most important question. <strong>Are you asking the right questions?</strong></p>
+
+    <p>If not, you might not be getting the feedback you need to make corrections in your behavior. You might not be getting type of answers that you need to hear. You also might just be getting downright wrong information.</P>
+
+    <h4>If you feel lost, don't worry. Here are some tips.</h4>
+
+    <h5>1. Don’t Ask Yes or No Questions</h5>
+    <p>When you ask a yes or no question, you will most often get incomplete information. Instead, ask an open-ended question. By using an open-ended question you get insights and additional information you might not have known existed.</p>
+
+    <h4>2. Dig Deeper</h4>
+    <p>Always consider using follow-up questions. Unless you are looking strictly for the facts, there is some sort of assumption in the answer the person gives you. Ask them a follow up question such as, “What makes you say that?” or “Why do you think that?”</p>
+
+    <h4>3. Use the Power of Silence</h4>
+    <p>Start getting comfortable with asking a question, waiting for response, listening to the response and then waiting some more. Many times the person you are questioning has more information and will bring it out when you wait for it. </p>
+
+    <p>As you go forth in your quest for knowledge, <strong>remember that asking great questions takes practice.</strong> This implies that you probably won’t get it perfect every each outing. Just get started asking questions. Your skills will improve over time. Remember that if you want good answers, they come from asking good questions.</p>
+    </div>
   </div>
 
-  <div class="form">
-    <%= form_for @question, url: questions_path do |f| %>
-    <p class="form_p" id='title'><%= f.label :title %></p>
-    <p class="form_p" id="title_t"><%= f.text_area :title %> </p>
-    <p class="form_p" id="content"><%= f.label :content %></p>
-    <p class="form_p" id="content_t"><%= f.text_area :content %></p>
-    <%= f.submit %>
-    <% end %>
+  <div class="container">
+      <h4>Question</h4>
+      <div class="form">
+      <%= form_for @question, url: questions_path do |f| %>
+      <p id='title'><%= f.label :title %></p>
+      <p class="q-title" id="title_t"><%= f.text_field :title %> </p>
+      <p id="content"><%= f.label :content %></p>
+      <p  class="q-content" id="content_t"><%= f.text_area :content %></p>
+      <%= f.submit %>
+      <% end %>
   </div>
-</div>
 
 <br>
 <div class="handlebars-container">
   <script id="question-template" type="text/x-handlebars-template">
   <div class="question" id={{ id }}>
-  <p>{{ title }}</p>
-  <p>{{ content }}</p>
-  <button class="show-answers">Show Answers</button>
-  <button class="new-answer">Add Answer</button>
-
+    <p>{{ title }}</p>
+    <p>{{ content }}</p>
+    <button class="show-answers">Show Answers</button>
+    <button class="new-answer">Add Answer</button>
   </div>
-
   </script>
-
 
   <script id="answer-template" type="text/x-handlebars-template">
   <div class="answer" id="/{{ id }}">
-  <p>{{ title }}</p>
-  <p>{{ content }}</p>
-  <br>
+    <p>{{ title }}</p>
+    <p>{{ content }}</p>
+    <br>
   </div>
   </script>
 
   <div class="questions-container">
-
     <% @questions.each do |question| %>
     <div class="question" id="<%= question.id %>">
-
       <p><%= question.title %></p>
       <p><%= question.content %></p>
 
@@ -69,7 +83,6 @@
     </div>
     <br>
     <% end %>
-
   </div>
 
   <div class="form-container hidden">
@@ -79,8 +92,9 @@
       <input type="submit" value="Add answer" >
     </form>
   </div>
+
 </div>
-</div>
+
 
 
 
