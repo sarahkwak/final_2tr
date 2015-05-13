@@ -14,6 +14,6 @@
 * Login through LinkedIn
 
 Heroku link:
-https://stark-coast-9457.herokuapp.com/
+https://stormy-sierra-1647.herokuapp.com
 
 <tt>rake doc:app</tt>.
