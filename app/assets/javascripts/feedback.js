@@ -19,7 +19,7 @@ $(document).ready(function() {
       request.done(function(serverData) {
         var template = Handlebars.compile($('#review-template').html());
         $('.review-container').append(template(serverData));
-        var numStars = $('.review-container').children().last().find('p').last().text();
+        var numStars = serverData.rating;
         var stars = " "
         for(var i=0; i < numStars; i++) {
           stars += '⭐'
