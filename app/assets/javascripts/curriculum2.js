@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('#git').on("click", function(evt) {
     evt.preventDefault();
     console.log("im from ajax")
@@ -13,7 +14,7 @@ $(document).ready(function() {
 
       while (i < 6){
         var linkListing = $('<li class="linkListing"></li>')
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
         ul.append(linkListing);
         i++;
@@ -40,8 +41,10 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 16){
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
-        ul.append(course);
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
         i++;
       }
       var myModal = new Modal({
@@ -66,8 +69,10 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 8){
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
-        ul.append(course);
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
         i++;
       }
       var myModal = new Modal({
@@ -93,8 +98,10 @@ $(document).ready(function() {
       var i = 0
       var resources = $('<p></p>')
       while (i < 3){
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
-        ul.append(course);
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
         i++;
       }
       var myModal = new Modal({
@@ -120,8 +127,10 @@ $('#sublime').on("click", function(evt) {
       var i = 0
       var resources = $('<p></p>')
       while (i < 4){
-        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a><br>')
-        ul.append(course);
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
         i++;
       }
       var myModal = new Modal({
