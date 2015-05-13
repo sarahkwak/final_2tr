@@ -9,7 +9,7 @@ div {
   border-radius: 10px 10px 0 0;
   /*display: fixed;*/
   opacity: 1;
-  width: 97.35%;
+  /*width: 97.35%;*/
 }
 
 #user_nav #not_logged_in a {
@@ -30,7 +30,7 @@ div {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: right bottom;
-  height: 604px;
+  height: 28vh;
   padding-top: 30%;
 }
 
