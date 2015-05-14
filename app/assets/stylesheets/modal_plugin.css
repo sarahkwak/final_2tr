@@ -117,7 +117,7 @@
 
 .scotch-modal.fade-and-drop.scotch-open
 {
-    top: 160%;
+    top: 200%;
     opacity: .8;
     background-color: white;
     background: white;
@@ -205,4 +205,24 @@ a {
 
 .linkListing a:hover{
     color: #4c004c;
+}
+
+.main-container-1{
+    display: inline;
+}
+.main-container-2{
+    display: inline;
+}
+
+.lst {
+    display: inline;
+    font-size: 1.1em;
+}
+
+.modal_bar{
+    text-align: center;
+}
+
+li:hover {
+     color: #4c004c;
 }
