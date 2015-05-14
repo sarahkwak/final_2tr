@@ -20,9 +20,8 @@ ActiveRecord::Schema.define(version: 20150510225251) do
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.integer  "question_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "curriculums", force: :cascade do |t|

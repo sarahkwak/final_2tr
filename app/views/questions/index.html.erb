@@ -1,17 +1,18 @@
-<div class="user_nav question" >
- <div class="logged_in">
+<div class="profile-container">
+  <div id="user_nav" >
+   <div class="logged_in">
     <div class="logged_in_nav">
      Welcome <%= current_user.email %>
    </div>
-
+    <div class="logged_in_nav">
+      <%= link_to "Home", root_path %>
+    </div>
    <div class="logged_in_nav">
      <%= link_to "Profile", profile_path(current_user) %>
    </div>
-
    <div class="logged_in_nav">
      <%= link_to "Find a tutor", tutors_path %>
    </div>
-
    <div class="logged_in_nav">
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
    </div>
@@ -19,14 +20,14 @@
 </div>
 
 <div class="hero-div"></div>
-  <div class="u-pull-left">
+  <div class="question-script u-pull-left">
     <h5>“Judge a man by his questions rather than by his answers.”</h5>
     <p>Before starting to fill in question form, you should ask yourself the most important question. <strong>Are you asking the right questions?</strong></p>
 
     <p>If not, you might not be getting the feedback you need to make corrections in your behavior. You might not be getting type of answers that you need to hear. You also might just be getting downright wrong information.</P>
   </div>
 
-    <div class="form u-pull-right" id="question-form">
+    <div class="form question-form u-pull-right" id="question-form">
       <h4>Question</h4>
       <%= form_for @question, url: questions_path do |f| %>
       <p id='title'><%= f.label :title %></p>
@@ -37,7 +38,8 @@
       <% end %>
   </div>
 
-<br>
+<div class="u-cf"></div>
+
 <div class="handlebars-container list-question">
   <h4>List of Questions</h4>
   <script id="question-template" type="text/x-handlebars-template">
