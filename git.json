@@ -28,7 +28,7 @@
     {
       "title": "Workflows",
       "url": "http://teamtreehouse.com/library/git-basics/workflows/a-day-in-the-life-of-a-git-project",
-      "description": "Now that we know all the basic tools for managing projects with Git, it's time to put them all together. Let's take a look at how all the tools and ideas we've learned so far work together to make version control an important part of the day-to-day process of working on a project, and talk about some of the common ideas about \"best practices\" for using Git."
+      "description": "Now that we know all the basic tools for managing projects with Git, it's time to put them all together. Let's take a look at how all the tools and ideas we've learned so far work together to make version control an important part of the day-to-day process of working on a project, and talk about some of the common ideas about best practices for using Git."
     }
   ]
 }

@@ -28,7 +28,7 @@
   </div>
 
     <div class="form question-form u-pull-right" id="question-form">
-      <h4>Question</h4>
+      <h3>Question</h3>
       <%= form_for @question, url: questions_path do |f| %>
       <p id='title'><%= f.label :title %></p>
       <p class="q-title" id="title_t"><%= f.text_field :title, :size=>"150" %> </p>
@@ -40,48 +40,73 @@
 
 <div class="u-cf"></div>
 
-<div class="handlebars-container list-question">
-  <h4>List of Questions</h4>
+<div class="container">
+  <h3>List of All Questions</h3>
   <script id="question-template" type="text/x-handlebars-template">
   <div class="question" id={{ id }}>
-    <p>Title: {{ title }}</p>
-    <p>Content: {{ content }}</p>
+    <h4>{{ title }}</h4>
+    <p>{{ content }}</p>
     <button class="show-answers">Show Answers</button>
     <button class="new-answer">Add Answer</button>
   </div>
   </script>
-
-  <script id="answer-template" type="text/x-handlebars-template">
-  <div class="container answer" id="/{{ id }}">
-    <p>{{ title }}</p>
-    <p>{{ content }}</p>
-    <br>
-  </div>
-  </script>
-
-  <div class="questions-container">
-    <% @questions.each do |question| %>
-    <div class="question" id="<%= question.id %>">
-      <p><strong>Title:</strong> <%= question.title %></p>
-      <p><strong>Content:</strong> <%= question.content %></p>
-
-      <button class="show-answers">Show Answers</button>
-      <button class="new-answer">Add Answer</button>
-      <br>
-    </div>
-    <br>
-    <% end %>
-  </div>
-
-  <div class="form-container hidden">
-    <form class="new-answer-form">
-      <input type="text" name="title" placeholder="Title">
-      <input type="text" name="content" placeholder="Content">
-      <input type="submit" value="Add answer" >
-    </form>
-  </div>
-
 </div>
+
+<script id="answer-template" type="text/x-handlebars-template">
+<div class="container answer" id="/{{ id }}">
+  <p>{{ title }}</p>
+  <p>{{ content }}</p>
+</div>
+</script>
+
+<div class="questions-container">
+  <% @questions.each do |question| %>
+  <div class="question" id="<%= question.id %>">
+    <h3><%= question.title %></h3>
+    <p><%= question.content %></p>
+
+    <button class="show-answers">Show Answers</button>
+    <button class="new-answer">Add Answer</button>
+  </div>
+  <% end %>
+</div>
+
+<div class="form-container hidden">
+  <form class="new-answer-form">
+    <h3><input class="answer-title" type="text" name="title" placeholder="Title"></h3>
+    <input class="answer-content" type="text" name="content" placeholder="Content">
+    <input type="submit" value="Add answer" >
+  </form>
+</div>
+
+
+<footer>
+  <div class="learn_more three columns">
+    <h5 class="docs-header">Learn More</h5>
+    <P>Read our Blog</P>
+    <P>How 2tr works</P>
+  </div>
+
+  <div class="need_help three columns">
+    <h5 class="docs-header">Contact Center</h5>
+    <P>customer@2tr.com</P>
+  </div>
+
+  <div class="about_2tr three columns">
+    <h5 class="docs-header">About 2tr</h5>
+    <P>In the Press</P>
+    <P>Jobs</P>
+  </div>
+
+  <div class="top_cities three columns">
+    <h5 class="docs-header">Top Cities</h5>
+    <P>San Francisco</P>
+    <P>Vancouver</P>
+    <P>Honolulu</P>
+  </div>
+</footer>
+
+
 
 
 
