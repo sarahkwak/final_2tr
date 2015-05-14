@@ -71,3 +71,51 @@ $(document).ready(function() {
 // })
 
 
+
+
+// <div class='wrapper debug' >
+//   <div id='firebase-override' class='debug'>
+//     <div id='firechat-wrapper' class= 'debug'>
+//     </div>
+//   </div>
+
+
+//   <div class="video-screen debug">
+//   </div>
+
+//   <div class='videoz debug'>
+//     <div>
+//     <button class="start_video">Start video</button>
+//     <button class="end_video">End video</button>
+//     </div>
+//     <button class="twitter_video" onclick='login()'>Chat login with Twitter</button>
+//     <%= button_to "home", root_path, method: :get %>
+//   </div>
+// </div>
+
+// <script>
+// // Create a new Firebase reference, and a new instance of the Login client
+// var chatRef = new Firebase('https://shining-torch-9209.firebaseio.com/chat');
+
+// function login() {
+//   chatRef.authWithOAuthPopup("twitter", function(error, authData) {
+//     if (error) {
+//       console.log(error);
+//     }
+//   });
+// }
+
+// function initChat(authData) {
+//   var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
+//   chat.setUser(authData.uid, authData[authData.provider].displayName);
+// }
+// </script>
+
+// <script>
+// chatRef.onAuth(function(authData) {
+//   // Once authenticated, instantiate Firechat with our user id and user name
+//   if (authData) {
+//     initChat(authData);
+//   }
+// });
+</script>
