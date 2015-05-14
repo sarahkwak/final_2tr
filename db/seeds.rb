@@ -108,7 +108,7 @@ require 'JSON'
 
 mongoDB_data = File.read('mongoDB.json')
 parsed_data = JSON.parse(mongoDB_data)
-parsed_data['Sublime']
+parsed_data['MongoDB']
 i = 0
 while i< parsed_data['MongoDB'].length
   curriculum = Curriculum.new

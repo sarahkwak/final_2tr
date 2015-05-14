@@ -1,7 +1,7 @@
 .hero-div {
   background-image: url("https://download.unsplash.com/3/doctype-hi-res.jpg");
   opacity: .8;
-  height: 500px;
+  height: 400px;
 }
 .q-title text_area {
   resize:vertical;
@@ -11,29 +11,55 @@
 
 .text_area {
   margin: 0px 0px 15px;
-  width: 790px;
+  width: 60%;
   height: 65px;
   resize: none;
 }
 .question-script {
-  width: 40%;
-  padding-left: 40px;
+  font: 1.3em;
+  width: 33%;
+  padding-top: 60px;
+  padding-left: 60px;
+  background-image: url('question.png');
+  background-repeat: no-repeat;
+  background-position:center;
+  opacity: .6;
+  background-size: 60%;
 }
 .question-form {
-  width: 40%;
+  width: 60%;
+  padding-top: 30px;
+  margin-left:-10px;
+}
+.question-form h4 {
+  border-bottom: solid #CCFF99;
 }
 .question-text h4 {
-  /*padding: 40px;*/
+  padding: 40px;
 }
 
+.question {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+  border-top: solid #CCFF99;
+}
+.question button {
+  position: center;
+}
 .hidden {
   display: none;
 }
-
-
-.list-question h4 {
-  text-align: center;
+.answer-title {
+  width: 60%;
 }
-.list-question button {
-
+.answer-content {
+  width: 60%;
+  height: 300px;
+}
+a:hover {
+  font-size: 1.2em;
 }
