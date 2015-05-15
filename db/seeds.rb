@@ -6,8 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-require 'JSON'
-
+# require 'JSON'
+# require 'pry'
 # json_data = File.read('ruby.json')
 # parsed_data = JSON.parse(json_data)
 # parsed_data['ruby']
@@ -106,16 +106,62 @@ require 'JSON'
 #   i+=1
 # end
 
-mongoDB_data = File.read('mongoDB.json')
-parsed_data = JSON.parse(mongoDB_data)
-parsed_data['MongoDB']
-i = 0
-while i< parsed_data['MongoDB'].length
-  curriculum = Curriculum.new
-  curriculum.url = parsed_data['MongoDB'][i]['url']
-  curriculum.description = parsed_data['MongoDB'][i]['description']
-  curriculum.title = parsed_data['MongoDB'][i]['title']
-  curriculum.curriculum_type = "MongoDB"
-  curriculum.save
-  i+=1
-end
+# mongoDB_data = File.read('mongoDB.json')
+# parsed_data = JSON.parse(mongoDB_data)
+# parsed_data['MongoDB']
+# i = 0
+# while i< parsed_data['MongoDB'].length
+#   curriculum = Curriculum.new
+#   curriculum.url = parsed_data['MongoDB'][i]['url']
+#   curriculum.description = parsed_data['MongoDB'][i]['description']
+#   curriculum.title = parsed_data['MongoDB'][i]['title']
+#   curriculum.curriculum_type = "MongoDB"
+#   curriculum.save
+#   i+=1
+# end
+
+# tutors_data = File.read('tutors.json')
+# parsed_data = JSON.parse(tutors_data)
+# data = parsed_data['Tutors']
+# i = 0
+# while i< data.length
+#   user = User.new
+#   user.url = data[i]['tutors']['src']
+#   user.email = data[i]['tutors']['alt'].split(" ")[0]+"@gmail.com"
+#   user.first_name = data[i]['tutors']['alt'].split(" ")[0]
+#   user.availability ="I am available most of " + ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"].sample + [" at ", " after "].sample + ["1","2","3","4","5","6","7","8","9","10","11"].sample + " pm."
+#   user.description = "I am nice person with " + ["javascript", "ruby", "css"].sample + " skills. I love " + ["dog", "cat", "lego", "to eat sushi", "travel"].sample + " and I am currently " + ["looking for a full time developer position in SF", "working for facebook", "working for google", "working for lyft", "working for Khan Academy", "working for DBC"].sample + ". Hope to meet you and share my experties!"
+#   user.user_type = [1, 2].sample
+#   user.password = "heff3030"
+#   user.save
+#   i+=1
+# end
+
+# user = User.new
+#   user.url ="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ryan_Gosling_2_Cannes_2011_(cropped).jpg/220px-Ryan_Gosling_2_Cannes_2011_(cropped).jpg"
+#   user.email = "sarahkorea@gamil.com"
+#   user.first_name = "Ryan"
+#   user.availability ="Anytime for you Baby"
+#   user.description = "I am a very handsome person and know some of CSS. I have a couple of books publish for Urbanoutfitters but they are not related to my CSS skills. If you call me and have a chat with me, I will show you what I can do."
+#   user.user_type = 2
+#   user.password = "password"
+#   user.save
+#   i+=1
+
+  question = Question.new
+  question.title = "Reverse Array"
+  question.content = "I have the following array [12,16,5,9,11,5,4] it prints: 12,16,5,9,11,5,4. I want it to print: 4,5,11,9,5,16,12   When I did arrary.reverse it printed:  4,5,11,9,5,61,21   It reversed individual numbers - any idea how I can stop that?)"
+  question.user_id = 1
+  question.save
+
+  question = Question.new
+  question.title = "Ruby Converting string to array "
+  question.content = "I have a string '1,2,3,4' and I'd like to convert it into an array: [1,2,3,4]"
+  question.user_id = 2
+  question.save
+
+question = Question.new
+  question.title = "How to get out of pry debugger "
+  question.content = "contrl C or D, exit doesn't work. What should I do??"
+  question.user_id = 2
+  question.save

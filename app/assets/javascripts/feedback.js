@@ -4,7 +4,7 @@ $(document).ready(function() {
     var id = $(this).attr('id');
     var reviewModal = new Modal({
       content:
-      '<form class="new-review"><input type="text" name="content" placeholder="content" ><input type="text" name="rating" placeholder="rating from 1 to 5" ><input type="submit" value="New review" ></form>',
+      '<form class="new-review"><input type="text" size="80" name="content" placeholder="content" ><input type="text" name="rating" placeholder="rating from 1 to 5" ><input type="submit" value="New review" ></form>',
       maxWidth: 600
     });
     reviewModal.open();
