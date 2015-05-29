@@ -69,7 +69,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :url, "Image URL" %><br />
+    <%= f.label :url, "Profile Image" %><br />
+    <%= f.file_field :url, autofocus: true %>
+    <%= f.label :url, "Or Image URL" %><br />
     <%= f.text_field :url, autofocus: true %>
   </div>
 

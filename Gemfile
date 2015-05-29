@@ -29,7 +29,7 @@ gem 'omniauth'
 gem 'omniauth-linkedin'
 
 gem 'cine_io'
-
+gem "paperclip", "~> 4.2"
 
 gem 'dotenv-rails'
 
