@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   has_many :reviewee_relationships, class_name: "Review", foreign_key: "reviewer_id"
   has_many :reviewees, class_name: "User", through: :reviewee_relationships
+  has_attached_file :image
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   # has_many :reviewer_relationships, through: :review, foreign_key: :reviewer_id
   # has_many :reviewers, source: :user, through: :reviewer_relationships
 

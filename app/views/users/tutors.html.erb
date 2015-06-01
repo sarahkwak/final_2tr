@@ -1,31 +1,17 @@
 <div class="profile-container">
-  <div id="user_nav" >
-   <div class="logged_in">
-    <div class="logged_in_nav">
-     Welcome <%= current_user.email %>
-   </div>
-    <div class="logged_in_nav">
-      <%= link_to "🏠 Home", root_path %>
-    </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-   </div>
- </div>
+  <%= render "navs/login_nav" %>
 </div>
 
 <div class="splash">
+  <div class ="tutor-window">
+    <h1>Tutors near you</h1>
+  </div>
 </div>
 
 <div class="user-container">
   <% @tutors.each do |tutor| %>
     <div class="user" id="<%= tutor.id %>">
-      <img src="<%= tutor.url %>" alt="Profile">
+      <img src="<%= tutor.image %>" alt="Profile">
       <p><%= tutor.first_name %></p>
       <p><%= tutor.description %></p>
       <button class="invitation">Send chat invitation</button>

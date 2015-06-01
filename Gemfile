@@ -29,8 +29,8 @@ gem 'omniauth'
 gem 'omniauth-linkedin'
 
 gem 'cine_io'
-
-
+gem "paperclip", "~> 4.2"
+gem 'rmagick'
 gem 'dotenv-rails'
 
 # Use ActiveModel has_secure_password
