@@ -65,7 +65,7 @@
 
   <div class='profile-about'>
     <h2>About <%= @user.first_name %></h2>
-    <img src="<%= @user.image %>">
+    <img src="<%= @user.image(:thumb) %>">
     <h5>Email: <%= @user.email %></h5>
     <h5>Description: <%= @user.description %></h5>
     <% if current_user.id == @user.id %>
