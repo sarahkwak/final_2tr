@@ -1,57 +1,6 @@
 <div class="top-container">
   <title>2TR Online Learning Can be Easier</title>
-  <div id="user_nav" >
-   <% if user_signed_in? %>
-   <% if session[:linkedin_token].nil? %>
-   <div class="logged_in">
-    <div class="logged_in_nav">
-     Welcome <%= current_user.first_name|| current_user.email %>
-   </div>
-   <div class="logged_in_nav">
-      <%= link_to "🏠 Home", root_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-   </div>
- </div>
- <% else %>
- <div class="logged_in">
-   <div class="logged_in_nav">
-     Welcome <%= current_user.first_name || current_user.email %>
-   </div>
-   <div class="logged_in_nav">
-      <%= link_to "🏠 Home", root_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
-   </div>
- </div>
- <% end %>
- <% else %>
- <div id="not_logged_in">
-  <div class="test">
-    <a class='tutor_button' href='/users/sign_up'>🎓 Become a Tutor</a>
-  </div>
-  <div class="test">
-    <a class="login">📚 Log In</a>
-  </div>
-  <div class="test">
-    <a class="signup">📖 Sign Up</a>
-  </div>
-</div>
-<% end %>
+  <%= render "navs/nav" %>
 </div>
 
 <div class="signup-render">
@@ -69,7 +18,7 @@
 </div>
 
 <div class="hero"></div>
-<div class="main-quote">A Different Way to Learn Coding</div>
+<div class="main-quote">A New Way to Learn Coding</div>
   <% if user_signed_in? %>
 
   <% else %>
