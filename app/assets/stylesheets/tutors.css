@@ -21,3 +21,32 @@
   opacity: .8;
   margin-bottom: 1%;
 }
+.map-container {
+  width: 800px;
+  height: 500px;
+
+}
+.postcode {
+  left: 40px;
+  margin-left: 80px;
+  display: inline-block;
+}
+#map-canvas {
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin-left: 5px;
+
+}
+/*#panel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -180px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}*/
