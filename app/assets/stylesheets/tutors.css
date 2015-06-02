@@ -29,10 +29,10 @@
   left: 30px;
 }
 .postcode {
-  float:left;
+  float: left;
   width: 300px;
-  position:relative;
-  left:12%;
+  position: relative;
+  left: 12%;
   top: 30%;
   font-size: 1.3em;
   text-align: center;
@@ -41,9 +41,9 @@
   top: -30%;
   height: 330px;
   width: 330px;
-  float:right;
-  position:relative;
-  right:-35%;
+  float: right;
+  position: relative;
+  right: -35%;
 }
 /*#panel {
   position: absolute;
