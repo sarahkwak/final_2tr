@@ -1,3 +1,4 @@
+<script src="geocode.js"></script>
 <div class="profile-container">
   <%= render "navs/login_nav" %>
 </div>
@@ -29,20 +30,18 @@
       }
     });
   } //codeAddress()
-
+  google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
 <div class="splash">
   <div class="tutor-main">
-    <h2>Finding Toturs near you?</h2>
-    <form class="postcode">
-      Postcode<br>
+    <form class="postcode u-pull-left">
+      Finding Toturs near you?<br />
       <input id="address" type="textbox" value="94070">
       <br>
-      <input type="button" value="Postcode" onclick="codeAddress()">
+      <input type="button" value="Search" onclick="codeAddress()">
     </form>
-    <div id="map-canvas"></div>
-    <div class="u-cf">
+    <div id="map-canvas" class="u-pull-right"></div>
   </div>
 </div>
 
