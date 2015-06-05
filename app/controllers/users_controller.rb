@@ -23,6 +23,11 @@ class UsersController < ApplicationController
     @tutors = User.where(user_type: 2)
   end
 
+  def tutors_map
+    @tutors = User.where(user_type: 2)
+    render json: @tutors
+  end
+
   def show
     @user = User.find(params[:id])
     @reviews = Review.where(reviewee_id: @user.id)

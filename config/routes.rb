@@ -22,6 +22,7 @@ Rails.application.routes.draw do
    get '/curriculums/git' => 'curriculums#git', as: 'curriculums_git'
     get '/curriculums/subl' => 'curriculums#subl', as: 'curriculums_subl'
    get '/users/:id/invite' => 'users#invite'
+   get '/users/tutors_map' => 'users#tutors_map', as: 'tutors_map'
 
 
   # Example of regular route:
