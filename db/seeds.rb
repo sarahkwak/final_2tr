@@ -121,16 +121,16 @@ while i< parsed_data['MongoDB'].length
 end
 
 # tutor
-f_name = ["Sarah", "Ryan", "Brian", "Joe", "Michael", "Megan", "Sejeong"]
-for index in 0..6
+  f_name = ["Sarah", "Ryan", "Brian", "Joe", "Michael", "Megan", "Sejeong"]
+for i in 0..6 do
   user = User.new
+  user.first_name = f_name[i]
   user.user_type =2
-  user.first_name = f_name[index]
   user.email = user.first_name+"@gmail.com"
   user.password = "heff3030"
-  user.availability = "I am available anytime "+["monday", "tuesday", "wednesday", "thursday", "weekend"].sample + " "+ ["after ", "before "].sample + " " +["5", "6", "7"].sample + " pm"
-  user.description = "I am "+user.first_name+" and I am really good at "+["Ruby", "Javascript", "Python", "HTML", "CSS", "MongoDB"].sample + ". I am available at "+ user.availability + " but I can be available most of night time via video chat"
-  user.address = [94070, "portland, OR", "New York, NY", "95020"].sample
+  user.availability = "I am available anytime "+["monday", "tuesday", "wednesday", "thursday", "weekend"].sample + " "+ ["after", "before"].sample + ["5", "6", "7"].sample + " pm"
+  user.description = "I am "+user.first_name+" and I am really good at "+["Ruby", "Javascript", "Python", "HTML", "CSS", "MongoDB"].sample + ". I am available at "+ user.availability + "but I can be available most of night time via video chat"
+  user.address = ["94070", "94102", "94105", "94105", "94111"].sample
   user.save
 end
 
