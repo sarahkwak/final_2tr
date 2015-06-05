@@ -1,0 +1,58 @@
+<h2>Application</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :first_name, "First Name" %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Upload Your Picture" %><br />
+    <%= f.file_field :image, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "Post Code/Address" %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :availability, "Your Availability" %><br />
+    <%= f.text_field :availability, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <%= f.label :user_type, 'I will be an Awesome Tutor!', :value => 2 %>
+  <%= f.radio_button :user_type, 2 %>
+
+  <div class="field">
+    <%= f.label :description, "Introduce Yourself" %><br />
+    <%= f.text_area :description, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>
+

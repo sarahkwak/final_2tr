@@ -1,22 +1,5 @@
 <div class="profile-container">
-  <div id="user_nav" >
-   <div class="logged_in">
-    <div class="logged_in_nav">
-     Welcome <%= current_user.email %>
-   </div>
-    <div class="logged_in_nav">
-      <%= link_to "Home", root_path %>
-    </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-   </div>
- </div>
+  <%= render "navs/login_nav" %>
 </div>
 
 <div class='profile-edit'>
@@ -65,7 +48,7 @@
 
   <div class='profile-about'>
     <h2>About <%= @user.first_name %></h2>
-    <img class="profile-img u-pull-left" src="<%=@user.url%>">
+    <img src="<%= @user.image %>" height="90" width="110">
     <h5>Email: <%= @user.email %></h5>
     <h5>Description: <%= @user.description %></h5>
     <% if current_user.id == @user.id %>

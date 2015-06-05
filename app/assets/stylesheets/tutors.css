@@ -1,7 +1,7 @@
 .user {
   margin-left: 5%;
   padding: 1%;
-  border: 3px dotted #d9cdcd;
+  /*border: 3px dotted #d9cdcd;*/
   height: 400px;
   width: 40%;
   float: left;
@@ -21,3 +21,37 @@
   opacity: .8;
   margin-bottom: 1%;
 }
+.tutor-main {
+  left: 10%;
+  width: 500px;
+  height: 440px;
+  position: absolute;
+  left: 30px;
+}
+.postcode {
+  float: left;
+  width: 300px;
+  position: relative;
+  left: 12%;
+  top: 30%;
+  font-size: 1.3em;
+  text-align: center;
+}
+#map-canvas {
+  top: -30%;
+  height: 330px;
+  width: 330px;
+  float: right;
+  position: relative;
+  right: -35%;
+}
+/*#panel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -180px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}*/
