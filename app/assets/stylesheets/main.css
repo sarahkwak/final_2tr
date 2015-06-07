@@ -1,6 +1,4 @@
-div {
-  /*border: 5px dotted black;*/
-}
+
 
 #user_nav {
   text-align: center;
@@ -25,7 +23,6 @@ div {
 }
 
 .hero {
-  /*background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");*/
   background-image: url("Logo2.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -40,8 +37,10 @@ div {
   margin-bottom: 70px;
   font-family: 'Muli', sans-serif;
   font-size: 4em;
+  font-weight: bold;
   text-align: center;
 }
+
 .image{
 
 }
@@ -63,14 +62,11 @@ div {
   padding: 3%;
 }
 
-.main-container {
-  /*background-color: #eee;*/
-  text-align: center;
-  margin-top: 0;
-  margin-left: 7%;
-  margin-right: 7%;
-}
-.curriculum {
+
+
+
+
+.curriculum{
   position: relative;
   /*height: 10%;*/
   text-align: center;
@@ -80,6 +76,7 @@ div {
   border: 1px solid black;
   margin: 5px;
   padding: 3%;
+  box-shadow: 10px 10px 5px rgba(150, 54, 54, 0.5);
 }
 .tutor_list {
   position: relative;
@@ -135,6 +132,7 @@ footer {
 .question_button {
   color: black;
   margin: 20px;
+  box-shadow: 10px 10px 5px rgba(150, 54, 54, 0.5);;
 }
 
 .side_log {
@@ -213,3 +211,12 @@ transition: 0.5s;
 -webkit-transition: 0.5s;
 -o-transition: 0.5s;
 border: 2px solid #4c004c;}
+
+.main {
+  text-align: center;
+}
+
+
+.question-container {
+  text-align: center;
+}

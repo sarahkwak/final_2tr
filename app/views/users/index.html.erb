@@ -45,17 +45,26 @@
     </div>
   <% end %>
 
+<div class="main">
 
-<div class="main-container">
+<div class="main-container-1">
+
   <div class="curriculum" id="html">
       <strong>HTML/CSS</strong>
   </div>
+
   <div class="curriculum" id="javascript">
       <strong>Javascript</strong>
   </div>
+
   <div class="curriculum" id="angular">
       <strong>Angular</strong>
   </div>
+
+</div>
+
+<div class="main-container-2">
+
   <div class="curriculum" id="node">
       <strong>Node</strong>
   </div>
@@ -63,18 +72,31 @@
   <div class="curriculum" id="python">
       <strong>Python</strong>
   </div>
+
   <div class="curriculum" id="git">
       <strong>Git</strong>
   </div>
+
+</div>
+
+<div class="main-container-1">
+
   <div class="curriculum" id="ruby">
       <strong>Ruby</strong>
   </div>
+
   <div class="curriculum" id="obj-c">
       <strong>Obj C</strong>
   </div>
+
   <div class="curriculum" id="mongo">
       <strong>Mongo</strong>
   </div>
+
+</div>
+
+<div class="main-container-2">
+
   <div class="curriculum" id="jquery">
       <strong>jQuery</strong>
   </div>
@@ -84,6 +106,11 @@
   <div class="curriculum" id="sql">
       <strong>SQL</strong>
   </div>
+</div>
+</div>
+
+
+<div class="question-container">
   <% if user_signed_in? %>
   <%= button_to "Have A Question?", questions_path, method: :get, :class => "question_button" %>
   <% else %>
