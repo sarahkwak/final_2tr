@@ -1,189 +1,24 @@
 <div class="top-container">
   <title>2TR Online Learning Can be Easier</title>
-  <div id="user_nav" >
-   <% if user_signed_in? %>
-   <% if session[:linkedin_token].nil? %>
-   <div class="logged_in">
-    <div class="logged_in_nav">
-     Welcome <%= current_user.first_name || current_user.email %>
-   </div>
-   <div class="logged_in_nav">
-      <%= link_to "🏠 Home", root_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-   </div>
- </div>
- <% else %>
- <div class="logged_in">
-   <div class="logged_in_nav">
-     Welcome <%= current_user.first_name.capitalize || current_user.email %>
-   </div>
-   <div class="logged_in_nav">
-      <%= link_to "🏠 Home", root_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", linkedin_logout_path, method: :delete %>
-   </div>
- </div>
- <% end %>
- <% else %>
- <div id="not_logged_in">
-  <div class="test">
-    <a class='tutor_button' href='/users/sign_up'>🎓 Become a Tutor</a>
-  </div>
-  <div class="test">
-    <a class="login">📚 Log In</a>
-  </div>
-  <div class="test">
-    <a class="signup">📖 Sign Up</a>
-  </div>
-</div>
-<% end %>
+  <%= render "navs/nav" %>
 </div>
 
 <div class="signup-render">
-  <h2>Sign up</h2>
-
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-  <div class="field">
-    <%= f.label :first_name, "First Name*" %><br />
-    <%= f.text_field :first_name, autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :email, "Email*" %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :url, "Image URL" %><br />
-    <%= f.text_field :url, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up", :class => "side_log" %>
-  </div>
-  <% end %>
-
-  <%= render "users/shared/links" %>
+  <%= render "users/registrations/student_signup" %>
 </div>
 
 <div class="login-render">
-  <h2>Login</h2>
-
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-  <div class="field">
-    <%= f.label :remember_me %><%= f.check_box :remember_me %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-  <% end -%>
-
-  <% end %>
-
-  <%= render "users/shared/links" %>
+  <%= render "users/confirmations/login" %>
 </div>
 
 <div class='tutor-render'>
-<h2>Application</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :first_name, "First Name" %><br />
-    <%= f.text_field :first_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :url, "Image URL" %><br />
-    <%= f.text_field :url, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :availability, "Your Availability" %><br />
-    <%= f.text_field :availability, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <%= f.label :user_type, 'I will be an Awesome Tutor!', :value => 2 %>
-  <%= f.radio_button :user_type, 2 %>
-
-  <div class="field">
-    <%= f.label :description, "Introduce Yourself" %><br />
-    <%= f.text_area :description, autofocus: true %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
-</div>
+  <%= render "users/registrations/new" %>
 
 </div>
 
 <div class="hero"></div>
-<div class="main-quote">A Different Way to Learn Coding</div>
+<div class="main-quote">A New Way to Learn Coding</div>
   <% if user_signed_in? %>
 
   <% else %>

@@ -1,9 +1,48 @@
-/*<div class='videoz'>
-  <button class="start_video">Start video</button>
-  <button class="end_video">End video</button>
-  <%= button_to "home", root_path, method: :get %>
-</div>
+/*#firebase-override #firechat-wrapper {
+  width: 25%;
+  border: 5px dotted black;
+  margin-bottom: 10px;
+}
 
-<div class="video-screen">
+#firebase-override button#firechat-btn-create-room-prompt.btn.twothird.center {
+  height: 48px;
+}*/
 
-</div>*/
+/*.complete-container {
+  width: 25%;
+}*/
+
+
+#firechat-wrapper {
+  /*float: left;*/
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+#firebase-override {
+  width: 30%;
+  float: left;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.video-screen {
+}
+
+.videoz {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 7px;
+  float:left;
+  clear: both;
+}
+
+.debug {
+  /*border: 1px solid red;*/
+}
+
+body > div.wrapper.debug > div.video-screen.debug > video {
+  width: 450px;
+}

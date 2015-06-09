@@ -19,6 +19,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
       t.integer :user_type
+      t.attachment :image
 
       ## Confirmable
       # t.string   :confirmation_token

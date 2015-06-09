@@ -1,12 +1,65 @@
 .hero-div {
   background-image: url("https://download.unsplash.com/3/doctype-hi-res.jpg");
   opacity: .8;
+  height: 400px;
+}
+.q-title text_area {
+  resize:vertical;
+  height:700px;
+  width:700px;
 }
 
-.q-title {
-  /*somewhat make it wide*/
+.text_area {
+  margin: 0px 0px 15px;
+  width: 60%;
+  height: 65px;
+  resize: none;
+}
+.question-script {
+  font: 1.3em;
+  width: 33%;
+  padding-top: 60px;
+  padding-left: 60px;
+  background-image: url('question.png');
+  background-repeat: no-repeat;
+  background-position:center;
+  opacity: .6;
+  background-size: 60%;
+}
+.question-form {
+  width: 60%;
+  padding-top: 30px;
+  margin-left:-10px;
+}
+.question-form h4 {
+  border-bottom: solid #CCFF99;
+}
+.question-text h4 {
+  padding: 40px;
 }
 
-.q-content {
-  /*somewhat make it bigger */
+.question {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+  border-top: solid #CCFF99;
+}
+.question button {
+  position: center;
+}
+.hidden {
+  display: none;
+}
+.answer-title {
+  width: 60%;
+}
+.answer-content {
+  width: 60%;
+  height: 300px;
+}
+a:hover {
+  font-size: 1.2em;
 }

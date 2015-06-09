@@ -7,7 +7,7 @@
   border-radius: 10px 10px 0 0;
   /*display: fixed;*/
   opacity: 1;
-  width: 97.35%;
+  /*width: 97.35%;*/
 }
 
 #user_nav #not_logged_in a {
@@ -27,7 +27,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: right bottom;
-  height: 604px;
+  height: 28vh;
   padding-top: 30%;
 }
 
@@ -143,7 +143,9 @@ footer {
   display: inline-block;
   width: 18vw;
 }
-
+.re-failed a {
+  color: #CC00CC;
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
   .main-container {

@@ -1,22 +1,5 @@
 <div class="profile-container">
-  <div id="user_nav" >
-   <div class="logged_in">
-    <div class="logged_in_nav">
-     Welcome <%= current_user.email %>
-   </div>
-    <div class="logged_in_nav">
-      <%= link_to "Home", root_path %>
-    </div>
-   <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
-   </div>
-   <div class="logged_in_nav">
-     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-   </div>
- </div>
+  <%= render "navs/login_nav" %>
 </div>
 
 <div class='profile-edit'>
@@ -64,17 +47,17 @@
   <% end %>
 
   <div class='profile-about'>
-    <h3>About <%= @user.first_name %></h3>
-    <div class="user-profile">
-      <img class="profile-img u-pull-left" src="<%=@user.url%>">
-      <h5>Email: <%= @user.email %></h5>
-      <h5>Description: <%= @user.description %></h5>
-    </div>
-    <a class='edit_button'>Edit Profile</a>
+    <h2>About <%= @user.first_name %></h2>
+    <img src="<%= @user.image %>" height="90" width="110">
+    <h5>Email: <%= @user.email %></h5>
+    <h5>Description: <%= @user.description %></h5>
+    <% if current_user.id == @user.id %>
+      <button class='edit_button'>Edit Profile</button>
+    <% end %>
   </div>
 
-  <h4><%= @user.first_name %>'s Reviews</h4>
   <div class="review-container">
+    <h4><%= @user.first_name %>'s Reviews:</h4>
     <% @reviews.each do |review| %>
       <div class="review">
         <p>Review: <%= review.content %></p>
@@ -89,9 +72,6 @@
     </button>
   <% end %>
 
-  <div class='back_button'>
-    <%= link_to "Back", :back %>
-  </div>
 </div>
 
 <script id="review-template" type="text/x-handlebars-template">
@@ -100,3 +80,29 @@
     <p>{{ rating }}</p>
   </div>
 </script>
+
+<footer>
+  <div class="learn_more three columns">
+    <h5 class="docs-header">Learn More</h5>
+    <P>Read our Blog</P>
+    <P>How 2tr works</P>
+  </div>
+
+  <div class="need_help three columns">
+    <h5 class="docs-header">Contact Center</h5>
+    <P>customer@2tr.com</P>
+  </div>
+
+  <div class="about_2tr three columns">
+    <h5 class="docs-header">About 2tr</h5>
+    <P>In the Press</P>
+    <P>Jobs</P>
+  </div>
+
+  <div class="top_cities three columns">
+    <h5 class="docs-header">Top Cities</h5>
+    <P>San Francisco</P>
+    <P>Vancouver</P>
+    <P>Honolulu</P>
+  </div>
+</footer>
