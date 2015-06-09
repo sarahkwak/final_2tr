@@ -18,9 +18,13 @@
 </div>
 
 <div class="hero" style="background-image:url('https://download.unsplash.com/photo-1416339442236-8ceb164046f8')"></div>
-<div class="main-quote">A New Way to Learn Coding</div>
-  <% if user_signed_in? %>
-
+<div class="q-container">
+  <div class="main-quote">
+    A New Way to Learn Coding</br>
+    A New Way to Share Knowledge
+  </div>
+</div>
+    <% if user_signed_in? %>
   <% else %>
 
     <div class="how_to">
@@ -42,54 +46,54 @@
           <%= image_tag("Image2.jpg") %>
         </div>
       </div>
-    </div>
-  <% end %>
-
-
-<div class="main-container">
-  <div class="curriculum" id="html">
-      <strong>HTML/CSS</strong>
-  </div>
-  <div class="curriculum" id="javascript">
-      <strong>Javascript</strong>
-  </div>
-  <div class="curriculum" id="angular">
-      <strong>Angular</strong>
-  </div>
-  <div class="curriculum" id="node">
-      <strong>Node</strong>
-  </div>
-
-  <div class="curriculum" id="python">
-      <strong>Python</strong>
-  </div>
-  <div class="curriculum" id="git">
-      <strong>Git</strong>
-  </div>
-  <div class="curriculum" id="ruby">
-      <strong>Ruby</strong>
-  </div>
-  <div class="curriculum" id="obj-c">
-      <strong>Obj C</strong>
-  </div>
-  <div class="curriculum" id="mongo">
-      <strong>Mongo</strong>
-  </div>
-  <div class="curriculum" id="jquery">
-      <strong>jQuery</strong>
-  </div>
-  <div class="curriculum" id="sublime">
-      <strong>Sublime</strong>
-  </div>
-  <div class="curriculum" id="sql">
-      <strong>SQL</strong>
-  </div>
-  <% if user_signed_in? %>
-  <%= button_to "Have A Question?", questions_path, method: :get, :class => "question_button" %>
-  <% else %>
   <% end %>
 </div>
 
+<div class="curriculum-container">
+  <div class="main-container">
+    <h3 class="c-head">Don't Know Where to Start? Try Courses We carefully Selected</h3>
+    <div class="curriculum" id="html" style="background-color: #F4FBFF">
+        <strong>HTML/CSS</strong>
+    </div>
+    <div class="curriculum" id="javascript" style="background-color:#F4FBFF">
+        <strong>Javascript</strong>
+    </div>
+    <div class="curriculum" id="angular" style="background-color:#F4FBFF">
+        <strong>Angular</strong>
+    </div>
+    <div class="curriculum" id="node" id="javascript" style="background-color:#F4FBFF">
+        <strong>Node</strong>
+    </div>
+    <div class="curriculum" id="python" style="background-color:#F0E0FF">
+        <strong>Python</strong>
+    </div>
+    <div class="curriculum" id="git" style="background-color:#FFE0E0">
+        <strong>Git</strong>
+    </div>
+    <div class="curriculum" id="ruby" style="background-color:#F0E0FF">
+        <strong>Ruby</strong>
+    </div>
+    <div class="curriculum" id="obj-c" id="javascript" style="background-color:#F5E0EB">
+        <strong>Obj C</strong>
+    </div>
+    <div class="curriculum" id="mongo" style="background-color:#E6FFE6">
+        <strong>Mongo</strong>
+    </div>
+    <div class="curriculum" id="jquery" id="javascript" style="background-color:#F4FBFF">
+        <strong>jQuery</strong>
+    </div>
+    <div class="curriculum" id="sublime" style="background-color:#FFE0E0">
+        <strong>Sublime</strong>
+    </div>
+    <div class="curriculum" id="sql" style="background-color:#E6FFE6">
+        <strong>SQL</strong>
+    </div>
+    <% if user_signed_in? %>
+    <%= button_to "Have A Question?", questions_path, method: :get, :class => "question_button" %>
+    <% else %>
+    <% end %>
+  </div>
+</div>
 
 <footer>
   <div class="learn_more three columns">
