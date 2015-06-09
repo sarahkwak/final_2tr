@@ -7,14 +7,15 @@
   var geocoder;
   var map;
   var infowindow;
+  var marker;
   function initialize() {
-      geocoder = new google.maps.Geocoder();
-      var latlng = new google.maps.LatLng(37.7833, -122.4167);
-      var mapOptions = {
-        zoom: 8,
-        center: latlng
-      }
-      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(37.7833, -122.4167);
+    var mapOptions = {
+      zoom: 8,
+      center: latlng
+    }
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   }
 
@@ -34,12 +35,6 @@
   } //codeAddress()
   google.maps.event.addDomListener(window, 'load', initialize);
 
-  var marker = new google.maps.Marker({
-      position: '',
-      map: map,
-      title: ''
-  });
-
   $(document).ready(function() {
     $('.tutor-main').on('click', function(evt) {
       evt.preventDefault();
@@ -50,10 +45,12 @@
       })
       .done(function(response) {
         for (var i=0; i<response.length; i++) {
-          marker({position: response[i].address,
+          console.log(response[i].address)
+          var marker = new google.maps.Marker({
+          position: LatLng(response[i].address),
           map: map,
           title: response[i].first_name
-        });
+          });
         } //for
       })
       .fail(function() {
@@ -79,7 +76,7 @@
   <% @tutors.each do |tutor| %>
     <div class="user" id="<%= tutor.id %>">
       <img src="<%= tutor.image %>" height="90" width="110">
-      <p><%= tutor.first_name %></p>
+      <h3 style="color:#CCCCFF"><%= tutor.first_name %></h3>
       <p><%= tutor.description %></p>
       <p>I live in <%= tutor.address %> area</p>
       <button class="invitation">Send chat invitation</button>
