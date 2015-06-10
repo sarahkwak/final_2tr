@@ -144,4 +144,76 @@ class CurriculumsController < ApplicationController
     render json: @fundamentals
   end
 
+  def html
+    html_data = File.read('html.json')
+    parsed_data = JSON.parse(html_data)
+    parsed_data['html']
+    i = 0
+    while i< parsed_data['html'].length
+      curriculum = Curriculum.new
+      curriculum.url = parsed_data['html'][i]['url']
+      curriculum.description = parsed_data['html'][i]['description']
+      curriculum.title = parsed_data['html'][i]['title']
+      curriculum.curriculum_type = "html"
+      curriculum.save
+      i+=1
+    end
+    @html = Curriculum.where(curriculum_type: "html")
+    render json: @html
+  end
+
+  def css
+    css_data = File.read('css.json')
+    parsed_data = JSON.parse(css_data)
+    parsed_data['css']
+    i = 0
+    while i< parsed_data['css'].length
+      curriculum = Curriculum.new
+      curriculum.url = parsed_data['css'][i]['url']
+      curriculum.description = parsed_data['css'][i]['description']
+      curriculum.title = parsed_data['css'][i]['title']
+      curriculum.curriculum_type = "css"
+      curriculum.save
+      i+=1
+    end
+    @css = Curriculum.where(curriculum_type: "css")
+    render json: @css
+  end
+
+  def heroku
+    heroku_data = File.read('heroku.json')
+    parsed_data = JSON.parse(heroku_data)
+    parsed_data['heroku']
+    i = 0
+    while i< parsed_data['heroku'].length
+      curriculum = Curriculum.new
+      curriculum.url = parsed_data['heroku'][i]['url']
+      curriculum.description = parsed_data['heroku'][i]['description']
+      curriculum.title = parsed_data['heroku'][i]['title']
+      curriculum.curriculum_type = "heroku"
+      curriculum.save
+      i+=1
+    end
+    @heroku = Curriculum.where(curriculum_type: "heroku")
+    render json: @heroku
+  end
+
+  def javascript
+    javascript_data = File.read('javascript.json')
+    parsed_data = JSON.parse(javascript_data)
+    parsed_data['javascript']
+    i = 0
+    while i< parsed_data['javascript'].length
+      curriculum = Curriculum.new
+      curriculum.url = parsed_data['javascript'][i]['url']
+      curriculum.description = parsed_data['javascript'][i]['description']
+      curriculum.title = parsed_data['javascript'][i]['title']
+      curriculum.curriculum_type = "javascript"
+      curriculum.save
+      i+=1
+    end
+    @javascript = Curriculum.where(curriculum_type: "javascript")
+    render json: @javascript
+  end
+
 end

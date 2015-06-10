@@ -22,6 +22,10 @@ Rails.application.routes.draw do
    get '/curriculums/git' => 'curriculums#git', as: 'curriculums_git'
     get '/curriculums/subl' => 'curriculums#subl', as: 'curriculums_subl'
     get '/curriculums/fundamentals' => 'curriculums#fundamentals', as: 'curriculums_fund'
+    get '/curriculums/heroku' => 'curriculums#heroku', as: 'curriculums_heroku'
+    get '/curriculums/html' => 'curriculums#html', as: 'curriculums_html'
+    get '/curriculums/css' => 'curriculums#css', as: 'curriculums_css'
+    get '/curriculums/javascript' => 'curriculums#javascript', as: 'curriculums_js'
    get '/users/:id/invite' => 'users#invite'
    get '/users/tutors_map' => 'users#tutors_map', as: 'tutors_map'
 

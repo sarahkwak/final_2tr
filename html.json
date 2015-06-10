@@ -1,0 +1,20 @@
+{
+  "html": [
+    {
+      "title": "HTML Beginner Tutorial | HTML Dog",
+      "url": "http://htmldog.com/guides/html/beginner/"
+    },
+    {
+      "title": "HTML & CSS | Codecademy",
+      "url": "https://www.shortcutfoo.com/app/dojos/sublime-text-2-mac"
+    },
+    {
+      "title": "HTML Tables",
+      "url": "http://teamtreehouse.com/library/html-tables"
+    },
+    {
+      "title": "Build a Blog with Jekyll and GitHub Pages",
+      "url": "http://teamtreehouse.com/library/build-a-blog-with-jekyll-and-github-pages"
+    }
+  ]
+}
