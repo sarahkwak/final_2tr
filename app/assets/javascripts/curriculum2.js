@@ -174,6 +174,121 @@ $('#fundamentals').on("click", function(evt) {
     })
   })
 
+$('#css').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/css',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
+
+$('#html').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/html',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
+
+$('#javascript').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/javascript',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
+
+$('#heroku').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/heroku',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 
 
 
