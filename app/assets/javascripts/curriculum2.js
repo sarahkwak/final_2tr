@@ -144,7 +144,35 @@ $('#sublime').on("click", function(evt) {
     })
   })
 
-
+$('#fundamentals').on("click", function(evt) {
+    evt.preventDefault();
+      console.log("im from fundamentals")
+    $.ajax({
+      url: '/curriculums/fundamentals',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 
 
 
