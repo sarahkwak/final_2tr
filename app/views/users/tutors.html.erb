@@ -1,10 +1,22 @@
-<%= gmaps("map_options" => {:container_class => "map_container_renamed", "zoom" => 15, "auto_zoom" => false},"markers" => { "data" => @json }) %>
 <script src="geocode.js"></script>
 <div class="profile-container">
   <%= render "navs/login_nav" %>
 </div>
-
 <script>
+// Due to Turbolinks, this will be temp solution
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
   var geocoder;
   var map;
   var infowindow;
@@ -17,7 +29,6 @@
       center: latlng
     }
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
   }
 
   function codeAddress() {
@@ -34,8 +45,8 @@
       }
     });
   } //codeAddress()
-  google.maps.event.addDomListener(window, 'load', initialize);
 
+  google.maps.event.addDomListener(window, 'load', initialize);
   $(document).ready(function() {
     $('.tutor-main').on('click', function(evt) {
       evt.preventDefault();
@@ -59,6 +70,7 @@
       }) //fail
     })  //click
   }) //ready
+
 </script>
 
 <div class="splash">
