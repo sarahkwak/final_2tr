@@ -1,0 +1,16 @@
+{
+  "heroku": [
+    {
+      "title": "Getting Started on Heroku | Heroku Dev Center",
+      "url": "https://devcenter.heroku.com/start"
+    },
+    {
+      "title": "Introduction to Heroku - Code School",
+      "url": "https://www.codeschool.com/screencasts/heroku"
+    },
+    {
+      "title": "Deploying with Git | Heroku Dev Center",
+      "url": "https://devcenter.heroku.com/articles/git"
+    }
+  ]
+}

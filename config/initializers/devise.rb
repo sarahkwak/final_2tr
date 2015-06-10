@@ -257,4 +257,5 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   config.omniauth :linkedin, ENV["LINKED_IN_API"], ENV["LINKEDIN_CONSUMER_SKEY"]
+  config.secret_key = ENV['LINKEDIN_CONSUMER_SKEY']
 end

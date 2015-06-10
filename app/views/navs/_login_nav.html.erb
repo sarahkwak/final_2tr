@@ -4,13 +4,13 @@
      Welcome <%= current_user.email %>
    </div>
     <div class="logged_in_nav">
-      <%= link_to "Home", root_path %>
+      <%= link_to "🏠 Home", root_path %>
     </div>
    <div class="logged_in_nav">
-     <%= link_to "Profile", profile_path(current_user) %>
+     <%= link_to "👭 Profile", profile_path(current_user) %>
    </div>
    <div class="logged_in_nav">
-     <%= link_to "Find a tutor", tutors_path %>
+     <%= link_to "🌎 Find a tutor", tutors_path %>
    </div>
    <div class="logged_in_nav">
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>

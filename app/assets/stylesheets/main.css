@@ -26,7 +26,7 @@ div {
 
 .hero {
   /*background-image: url("https://download.unsplash.com/photo-1416339442236-8ceb164046f8");*/
-  background-image: url("Logo2.jpg");
+  /*background-image: url("Logo2.jpg");*/
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -35,15 +35,13 @@ div {
 }
 
 .main-quote {
+  /*font-family: 'Pacifico', cursive;*/
   margin: 10px;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
+  margin-top: 100px;
   font-family: 'Muli', sans-serif;
   font-size: 4em;
   text-align: center;
-}
-.image{
-
 }
 
 .value-prop {
@@ -61,6 +59,7 @@ div {
   /*margin: 1%;*/
   /*background-color: rgba(161, 142, 169, .5);*/
   padding: 3%;
+  margin-bottom: 60px;
 }
 
 .main-container {
@@ -74,13 +73,40 @@ div {
   position: relative;
   /*height: 10%;*/
   text-align: center;
-  width: 8%;
+  /*font-size: 1.5em;*/
+  width: 5%;
   /*height: 90px;*/
   display: inline-block;
-  border: 1px solid black;
+  border: 1px  black;
   margin: 5px;
-  padding: 3%;
+  margin-top: 15px;
+  padding: 7%;
 }
+.curriculum:hover {
+  background: #778899;
+transition: 0.5s;
+-moz-transition: 0.5s;
+-webkit-transition: 0.5s;
+-o-transition: 0.5s;
+  border: 2px solid #4c004c;
+}
+
+.c-head {
+  font-family: 'Pacifico', cursive;
+  /*background-color: #E3F6FF;*/
+  /*height: 80px;*/
+  text-align: center;
+  /*padding-top: 100px;*/
+  padding-bottom: 0;
+  background-size: 100%;
+  padding-bottom: 50px;
+}
+
+.curriculum-container {
+  background-size: 100%;
+  /*background-color: #F0E0FF;*/
+}
+
 .tutor_list {
   position: relative;
   float: right;
@@ -93,8 +119,9 @@ footer {
   width: 100%;
   display: inline-block;
   text-align: center;
-  padding-top: 18px;
-  margin-top: 25px;
+  /*padding-top: 18px;*/
+  margin-top: 100px;
+  padding-top: 20px;
   border-radius: 0 0 10px 10px;
 }
 
