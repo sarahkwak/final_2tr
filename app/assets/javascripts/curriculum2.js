@@ -294,7 +294,7 @@ $('#heroku').on("click", function(evt) {
   $('#mongo').on("click", function(evt) {
     evt.preventDefault();
     $.ajax({
-      url: '/curriculums/mongo',
+      url: '/curriculums/mongo_db',
       type: 'GET'
     })
     .done(function(response) {
