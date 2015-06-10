@@ -86,7 +86,7 @@ $(document).ready(function() {
     })
   })
 
-     $('#sql').on("click", function(evt) {
+    $('#sql').on("click", function(evt) {
     evt.preventDefault();
     console.log("im from ajax")
     $.ajax({
@@ -291,7 +291,63 @@ $('#heroku').on("click", function(evt) {
   })
 
 
+  $('#mongo').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/mongo_db',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 
+  $('#python').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/python',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 
 
 

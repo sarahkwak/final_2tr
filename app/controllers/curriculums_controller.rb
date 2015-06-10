@@ -216,4 +216,23 @@ class CurriculumsController < ApplicationController
     render json: @javascript
   end
 
+
+  def python
+    python_data = File.read('python.json')
+    parsed_data = JSON.parse(python_data)
+    parsed_data['python']
+    i = 0
+    while i< parsed_data['python'].length
+      curriculum = Curriculum.new
+      curriculum.url = parsed_data['python'][i]['url']
+      curriculum.description = parsed_data['python'][i]['description']
+      curriculum.title = parsed_data['python'][i]['title']
+      curriculum.curriculum_type = "python"
+      curriculum.save
+      i+=1
+    end
+    @python = Curriculum.where(curriculum_type: "python")
+    render json: @python
+  end
+
 end
