@@ -108,22 +108,22 @@ class CurriculumsController < ApplicationController
     render json: @subl
   end
 
-  def mongo_db
-    mongoDB_data = File.read('mongoDB.json')
-    parsed_data = JSON.parse(mongoDB_data)
-    parsed_data['MongoDB']
+  def mongo
+    mongo_data = File.read('mongoDB.json')
+    parsed_data = JSON.parse(mongo_data)
+    parsed_data['mongo']
     i = 0
-    while i< parsed_data['MongoDB'].length
+    while i< parsed_data['mongo'].length
       curriculum = Curriculum.new
-      curriculum.url = parsed_data['MongoDB'][i]['url']
-      curriculum.description = parsed_data['MongoDB'][i]['description']
-      curriculum.title = parsed_data['MongoDB'][i]['title']
-      curriculum.curriculum_type = "MongoDB"
+      curriculum.url = parsed_data['mongo'][i]['url']
+      curriculum.description = parsed_data['mongo'][i]['description']
+      curriculum.title = parsed_data['mongo'][i]['title']
+      curriculum.curriculum_type = "mongo"
       curriculum.save
       i+=1
     end
-    @mongoDB = Curriculum.where(curriculum_type: "MongoDB")
-    render json: @mongoDB
+    @mongo = Curriculum.where(curriculum_type: "mongo")
+    render json: @mongo
   end
 
   def fundamentals

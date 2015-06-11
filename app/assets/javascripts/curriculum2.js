@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   $('#git').on("click", function(evt) {
     evt.preventDefault();
-    console.log("im from ajax")
     $.ajax({
       url: '/curriculums/git',
       type: 'GET'
@@ -23,7 +22,7 @@ $(document).ready(function() {
             content: "" + $(ul).html(),
             maxWidth: 600,
           });
-        myModal.open();
+      myModal.open();
     })
     .fail(function(response) {
       console.log("error")
@@ -88,7 +87,6 @@ $(document).ready(function() {
 
     $('#sql').on("click", function(evt) {
     evt.preventDefault();
-    console.log("im from ajax")
     $.ajax({
       url: '/curriculums/sql',
       type: 'GET'
@@ -294,7 +292,7 @@ $('#heroku').on("click", function(evt) {
   $('#mongo').on("click", function(evt) {
     evt.preventDefault();
     $.ajax({
-      url: '/curriculums/mongo_db',
+      url: '/curriculums/mongo',
       type: 'GET'
     })
     .done(function(response) {

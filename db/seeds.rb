@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-require 'JSON'
+# require 'JSON'
 
 # json_data = File.read('ruby.json')
 # parsed_data = JSON.parse(json_data)

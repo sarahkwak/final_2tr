@@ -1,5 +1,5 @@
 {
-  "MongoDB": [
+  "mongo": [
     {
       "title": "MongoDB Tutorial by Tutorial's Point",
       "url": "http://www.tutorialspoint.com/mongodb/",
