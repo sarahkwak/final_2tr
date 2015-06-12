@@ -67,7 +67,7 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 8){
+      while (i < 7){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -241,7 +241,7 @@ $('#javascript').on("click", function(evt) {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 4){
+      while (i < 5){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -300,7 +300,7 @@ $('#heroku').on("click", function(evt) {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 4){
+      while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);

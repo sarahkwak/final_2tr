@@ -1,8 +1,8 @@
 {
   "html": [
     {
-      "title": "HTML Beginner Tutorial | HTML Dog",
-      "url": "http://htmldog.com/guides/html/beginner/"
+      "title": "HTML Beginner Tutorial | How to make a website",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website"
     },
     {
       "title": "HTML & CSS | Codecademy",
@@ -10,11 +10,11 @@
     },
     {
       "title": "HTML Tables",
-      "url": "http://teamtreehouse.com/library/html-tables"
+      "url": "https://teamtreehouse.com/library/html-tables"
     },
     {
       "title": "Build a Blog with Jekyll and GitHub Pages",
-      "url": "http://teamtreehouse.com/library/build-a-blog-with-jekyll-and-github-pages"
+      "url": "https://teamtreehouse.com/library/build-a-blog-with-jekyll-and-github-pages"
     }
   ]
 }
