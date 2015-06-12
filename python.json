@@ -1,10 +1,6 @@
 {
   "python": [
     {
-      "title": "The Python Tutorial — Python 2.7.10 documentation",
-      "url": "https://docs.python.org/2/tutorial/"
-    },
-    {
       "title": "Python | Codecademy",
       "url": "https://www.codecademy.com/en/tracks/python"
     },
@@ -15,6 +11,10 @@
     {
       "title": "Object Oriented Python | TeamTreehouse.com",
       "url": "https://teamtreehouse.com/library/objectoriented-python"
+    },
+    {
+      "title": "Using database in Python",
+      "url": "http://teamtreehouse.com/library/using-databases-in-python"
     }
   ]
 }
