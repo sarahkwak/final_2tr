@@ -2,7 +2,7 @@
   "fundamentals": [
     {
       "title": "Perfect Workflow in Sublime Text",
-      "url": "http://code.tutsplus.com/articles/perfect-workflow-in-sublime-text-free-course--net-27293",
+      "url": "https://code.tutsplus.com/articles/perfect-workflow-in-sublime-text-free-course--net-27293",
       "description": "What is consider to be the perfect workflow in Sublime Text 2. The course will cover everything from the basic core features, such as multiple cursors and the command palette, to the most popular and useful plugins, to working with Sublime's build system."
     },
     {
@@ -11,14 +11,9 @@
       "description": "DataQuest was created by @vikparuchuri, a self-taught coder and data scientist who struggled to find good tools to learn about data science online. DataQuest is centered around the ideas of keeping you engaged in learning and introducing concepts when they are needed to solve problems. Don't know how to code? No problem! We'll teach you the basics first."
     },
     {
-      "title": "The First Few Milliseconds of an HTTPS Connection",
-      "url": "http://www.moserware.com/2009/06/first-few-milliseconds-of-https.html",
+      "title": "HTTP vs. HTTPS: What's the Difference?",
+      "url": "https://www.biztechmagazine.com/article/2007/07/http-vs-https",
       "description": "In the 220 milliseconds that flew by, a lot of interesting stuff happened to make Firefox change the address bar color and put a lock in the lower right corner. This course will explain basic client/server side of logic."
-    },
-    {
-      "title": "Best Practices for Designing a Pragmatic RESTful API",
-      "url": "http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api?hn",
-      "description": "In designing an API for Enchant (a Zendesk Alternative), I've tried to come up with pragmatic answers to these questions. My goal is for the Enchant API to be easy to use, easy to adopt and flexible enough to dogfood for our own user interfaces."
     },
     {
       "title": "How Internet Works in 5 mins",

@@ -6,7 +6,6 @@ class AnswersController < ApplicationController
 
   def create
     @answer = Answer.new(
-      title: params[:title],
       content: params[:content]
       )
     @answer.user_id = current_user.id if current_user

@@ -2,23 +2,19 @@
   "css": [
     {
       "title": "CSS for Beginners - codeschool.com‎",
-      "url": "www.codeschool.com/courses/css‎"
-    },
-    {
-      "title": "CSS Tutorial - W3Schools",
-      "url": "www.w3schools.com/css/"
+      "url": "https://www.codeschool.com/courses/css‎"
     },
     {
       "title": "Centering Things - You will thank me for this",
-      "url": "http://www.w3.org/Style/Examples/007/center.en.html"
+      "url": "https://www.w3.org/Style/Examples/007/center.en.html"
     },
     {
-      "title": "HTML Color Picker - W3Schools",
-      "url": "www.w3schools.com/tags/ref_colorpicker.asp"
+      "title": "HTML Color Picker - Dans Tool",
+      "url": "https://www.hexcolortool.com/"
     },
     {
-      "title": "CSS · Bootstrap - The most powerful mobile first front-end framework",
-      "url": "http://getbootstrap.com/"
+      "title": "Don't Overthink It Grids | CSS-Tricks",
+      "url": "https://css-tricks.com/dont-overthink-it-grids/"
     }
   ]
 }
