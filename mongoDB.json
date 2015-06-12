@@ -1,18 +1,18 @@
 {
   "mongo": [
     {
-      "title": "MongoDB Tutorial by Tutorial's Point",
-      "url": "https://www.tutorialspoint.com/mongodb/",
+      "title": "Developing for the MEAN Stack and MongoDB",
+      "url": "https://www.lynda.com/Express.js-tutorials/Developing-MEAN-Stack-MongoDB/191940-2.html",
       "description": "MongoDB is an open-source document database, and leading NoSQL database. MongoDB is written in c++. This tutorial will give you great understanding on MongoDB concepts needed to create and deploy a highly scalable and performance oriented database."
     },
     {
-      "title": "MongoDB University",
-      "url": "https://university.mongodb.com/",
+      "title": "Foundations Programming Databases - MongoDB",
+      "url": "https://www.lynda.com/Programming-tutorials/Foundations-Programming-Databases/112585-2.html",
       "description": "Accelerate your learning with in-person training taught by MongoDB engineers. These immersive classes offer hands-on experience with MongoDB use cases based on years of field experience. Developer and DBA classes offered around the globe. We offer 2-day and 3-day classes."
     },
     {
-      "title": "MongoDB Tutorial 1. What is MongoDB? ",
-      "url": "https://www.youtube.com/watch?v=liQzIsFnCr0",
+      "title": "Article - MySQL vs MongoDB",
+      "url": "https://www.scriptrock.com/articles/mysql-vs-mongodb",
       "description": "MongoDB is an open-source document database, and leading NoSQL database. MongoDB is written in c++. This tutorial will give you great understanding on MongoDB concepts needed to create and deploy a highly scalable and performance oriented database."
     }
   ]

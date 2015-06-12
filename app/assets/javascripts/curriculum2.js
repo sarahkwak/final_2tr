@@ -10,7 +10,6 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-
       while (i < 6){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -39,7 +38,7 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 16){
+      while (i < 8){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -210,7 +209,7 @@ $('#html').on("click", function(evt) {
     .done(function(response) {
       console.log(response)
       var ul = $('<ul></ul>');
-      var i = 0
+      var i = 1
       var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
@@ -270,7 +269,7 @@ $('#heroku').on("click", function(evt) {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 4){
+      while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -325,7 +324,6 @@ $('#heroku').on("click", function(evt) {
       type: 'GET'
     })
     .done(function(response) {
-      console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
