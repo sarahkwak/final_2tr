@@ -20,17 +20,17 @@ $(document).ready(function() {
       type: 'get'
     });
     request.done(function(serverData) {
-      var emailModal = new Modal({content:
-        '<p>Link to chat room has been sent to your email</p>',
-        maxWidth: 600
+      alert("Link to chat room has been sent to your email");
+      // var emailModal = new Modal({content:
+      //   '<p>Link to chat room has been sent to your email</p>',
+      //   maxWidth: 600
       });
-      emailModal.open();
-    });
+      // emailModal.open();
     request.fail(function(serverData) {
       alert("Something went wrong");
     });
-  });
-});
+  }); //click
+}); //ready
 
 // $(document).ready(function(){
 //   CineIOPeer.init('9cd3947bc9fba6aa761c4edf5b795dc6');
