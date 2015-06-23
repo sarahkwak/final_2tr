@@ -3,7 +3,7 @@
   <%= render "navs/login_nav" %>
 </div>
 <script>
-Due to Turbolinks, this will be temp solution
+// Due to Turbolinks, this will be temp solution
   (function()
   {
     if( window.localStorage )
@@ -94,6 +94,7 @@ Due to Turbolinks, this will be temp solution
       <p>I live in <%= tutor.address %> area</p>
       <button class="invitation">Send chat invitation</button>
       <%= button_to "Profile", profile_path(tutor), method: :get %>
+      <div id="chat-inv"></div>
     </div>
   <% end %>
 </div>
