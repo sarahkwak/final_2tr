@@ -9,7 +9,6 @@ $(document).ready(function() {
     .done(function(response) {
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 6){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -37,7 +36,6 @@ $(document).ready(function() {
     .done(function(response) {
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 8){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -65,7 +63,6 @@ $(document).ready(function() {
     .done(function(response) {
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 7){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -93,7 +90,6 @@ $(document).ready(function() {
     .done(function(response) {
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -122,7 +118,6 @@ $('#sublime').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -152,7 +147,6 @@ $('#fundamentals').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -181,7 +175,6 @@ $('#css').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -210,7 +203,6 @@ $('#html').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 1
-      var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -239,7 +231,6 @@ $('#javascript').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 5){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -268,7 +259,6 @@ $('#heroku').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -298,7 +288,6 @@ $('#heroku').on("click", function(evt) {
       console.log(response)
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -326,7 +315,6 @@ $('#heroku').on("click", function(evt) {
     .done(function(response) {
       var ul = $('<ul></ul>');
       var i = 0
-      var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
