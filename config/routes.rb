@@ -26,6 +26,8 @@ Rails.application.routes.draw do
     get '/curriculums/html' => 'curriculums#html', as: 'curriculums_html'
     get '/curriculums/css' => 'curriculums#css', as: 'curriculums_css'
     get '/curriculums/javascript' => 'curriculums#javascript', as: 'curriculums_js'
+    get '/curriculums/mongo' => 'curriculums#mongo', as: 'curriculums_mongo'
+    get '/curriculums/python' => 'curriculums#python', as: 'curriculums_python'
    get '/users/:id/invite' => 'users#invite'
    get '/users/tutors_map' => 'users#tutors_map', as: 'tutors_map'
 

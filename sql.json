@@ -1,18 +1,18 @@
 {
   "SQL": [
     {
-      "title": "SQL Fundamentals",
-      "url": "http://sqlzoo.net/wiki/SQL_Tutorial",
+      "title": "Article - MySQL vs MongoDB",
+      "url": "https://www.scriptrock.com/articles/mysql-vs-mongodb",
       "description": "Learn SQL using: SQL Server, Oracle, MySQL, DB2, and PostgreSQL."
     },
     {
-      "title": "SQL Fundamentals with W3 School",
-      "url": "http://www.w3schools.com/sql/",
+      "title": "Database Foundations",
+      "url": "https://teamtreehouse.com/library/database-foundations",
       "description": "SQL is a standard language for accessing databases.Our SQL tutorial will teach you how to use SQL to access and manipulate data in: MySQL, SQL Server, Access, Oracle, Sybase, DB2, and other database systems."
     },
     {
-      "title": "SQL Problems and solutions",
-      "url": "http://www.sql-tutorial.ru/en/book_Intro.html",
+      "title": "PostgreSQL Tutorial",
+      "url": "https://www.postgresql.org/docs/8.0/static/tutorial.html",
       "description": "The goal of this book is quick study of SQL language. In this particular case «quick» does not mean «superficial». To the contrary, leaving alone many aspects of the language, I try to give thorough understanding of logical structure of data and, as a result, to give the idea of correct form of query taking into account structure. On top of that, we strongly believe, that reading of this book will contribute to understanding of the problems, which are outside the scope of this work."
     }
   ]

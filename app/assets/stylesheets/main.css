@@ -77,18 +77,18 @@ div {
   width: 5%;
   /*height: 90px;*/
   display: inline-block;
-  border: 1px  black;
+  border: 1px solid black;
   margin: 5px;
   margin-top: 15px;
-  padding: 7%;
+  padding: 5%;
 }
 .curriculum:hover {
-  background: #778899;
-transition: 0.5s;
--moz-transition: 0.5s;
--webkit-transition: 0.5s;
--o-transition: 0.5s;
-  border: 2px solid #4c004c;
+  background: #FAFAFC;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  border: 2px solid #E1E1E3;
 }
 
 .c-head {

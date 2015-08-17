@@ -2,7 +2,6 @@ $(document).ready(function() {
 
   $('#git').on("click", function(evt) {
     evt.preventDefault();
-    console.log("im from ajax")
     $.ajax({
       url: '/curriculums/git',
       type: 'GET'
@@ -11,7 +10,6 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-
       while (i < 6){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
@@ -23,7 +21,7 @@ $(document).ready(function() {
             content: "" + $(ul).html(),
             maxWidth: 600,
           });
-        myModal.open();
+      myModal.open();
     })
     .fail(function(response) {
       console.log("error")
@@ -40,7 +38,7 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 16){
+      while (i < 8){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -68,7 +66,7 @@ $(document).ready(function() {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 8){
+      while (i < 7){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class="link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -86,9 +84,8 @@ $(document).ready(function() {
     })
   })
 
-     $('#sql').on("click", function(evt) {
+    $('#sql').on("click", function(evt) {
     evt.preventDefault();
-    console.log("im from ajax")
     $.ajax({
       url: '/curriculums/sql',
       type: 'GET'
@@ -212,7 +209,7 @@ $('#html').on("click", function(evt) {
     .done(function(response) {
       console.log(response)
       var ul = $('<ul></ul>');
-      var i = 0
+      var i = 1
       var resources = $('<p></p>')
       while (i < 4){
         var linkListing = $('<li class="linkListing"></li>')
@@ -243,7 +240,7 @@ $('#javascript').on("click", function(evt) {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 4){
+      while (i < 5){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -272,7 +269,7 @@ $('#heroku').on("click", function(evt) {
       var ul = $('<ul></ul>');
       var i = 0
       var resources = $('<p></p>')
-      while (i < 4){
+      while (i < 3){
         var linkListing = $('<li class="linkListing"></li>')
         var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
         linkListing.append(course);
@@ -291,7 +288,62 @@ $('#heroku').on("click", function(evt) {
   })
 
 
+  $('#mongo').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/mongo',
+      type: 'GET'
+    })
+    .done(function(response) {
+      console.log(response)
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 3){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 
+  $('#python').on("click", function(evt) {
+    evt.preventDefault();
+    $.ajax({
+      url: '/curriculums/python',
+      type: 'GET'
+    })
+    .done(function(response) {
+      var ul = $('<ul></ul>');
+      var i = 0
+      var resources = $('<p></p>')
+      while (i < 4){
+        var linkListing = $('<li class="linkListing"></li>')
+        var course = $('<a class= "link" href=' + response[i].url +'>' + response[i].title + '</a>')
+        linkListing.append(course);
+        ul.append(linkListing);
+        i++;
+      }
+      var myModal = new Modal({
+            content: "" + $(ul).html(),
+            maxWidth: 600,
+          });
+        myModal.open();
+    })
+    .fail(function(response) {
+      console.log("error")
+    })
+  })
 
 
 

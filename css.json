@@ -2,23 +2,19 @@
   "css": [
     {
       "title": "CSS for Beginners - codeschool.com‎",
-      "url": "www.codeschool.com/courses/css‎"
+      "url": "https://www.codeschool.com/courses/css‎"
     },
     {
-      "title": "CSS Tutorial - W3Schools",
-      "url": "www.w3schools.com/css/"
+      "title": "How to create a modal window with css 2",
+      "url": "https://teamtreehouse.com/library/create-a-modal-window-with-css-2"
     },
     {
-      "title": "Centering Things - You will thank me for this",
-      "url": "http://www.w3.org/Style/Examples/007/center.en.html"
+      "title": "CSS Cliping Paths",
+      "url": "https://teamtreehouse.com/library/css-clipping-paths"
     },
     {
-      "title": "HTML Color Picker - W3Schools",
-      "url": "www.w3schools.com/tags/ref_colorpicker.asp"
-    },
-    {
-      "title": "CSS · Bootstrap - The most powerful mobile first front-end framework",
-      "url": "http://getbootstrap.com/"
+      "title": "From Bootstrap to Wordpress",
+      "url": "https://teamtreehouse.com/library/from-bootstrap-to-wordpress"
     }
   ]
 }
