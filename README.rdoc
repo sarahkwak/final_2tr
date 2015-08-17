@@ -19,4 +19,4 @@
 [The 2Tr](https://the2tr.herokuapp.com/)
 
 ## Screen Shot
-![Alt screenshot] ()
+![Alt screenshot] (https://github.com/sarahkwak/final_2tr/blob/master/app/assets/images/screenshot.png)
