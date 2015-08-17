@@ -1,9 +1,9 @@
-== README
+# The 2Tr
 
 2Tr is a web based application to help people learn how to code through an online-based curriculum.
 2Tr provides a video chat based platform and text chat to connect code learners with volunteer tutors.
 
-2Tr offers:
+## 2Tr offers:
 
 * Verified Online based curriculums for Ruby, HTML/CSS, Javascript and basic Computer Science
 
@@ -15,7 +15,8 @@
 
 * Login through LinkedIn
 
-Heroku link:
-https://guarded-fjord-5795.herokuapp.com/
+## Heroku link:
+[The 2Tr](https://the2tr.herokuapp.com/)
 
-<tt>rake doc:app</tt>.
+## Screen Shot
+![Alt screenshot] ()
