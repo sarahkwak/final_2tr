@@ -48,7 +48,7 @@ div {
   width: 30%;
   margin-top: 1rem;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -222,12 +222,9 @@ footer {
 
 }
 
-
-
-
-
 .linkListing {
 background: #000;
+font-size: 1.2em;
 transition: 0.5s;
 -moz-transition: 0.5s;
 -webkit-transition: 0.5s;
@@ -235,6 +232,7 @@ transition: 0.5s;
 
 .linkListing:hover {
 background: #778899;
+font-size: 1.2em;
 transition: 0.5s;
 -moz-transition: 0.5s;
 -webkit-transition: 0.5s;
