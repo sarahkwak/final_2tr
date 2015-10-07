@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
   require('cine_io')
 
-  def index
-  end
-
   # def signature
   #   if current_user
   #     client = CineIo::Client.new(secretKey: ENV['CINE_IO_SECRET_KEY'])
@@ -31,6 +28,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @reviews = Review.where(reviewee_id: @user.id)
+    p @user.email
+    p @user.first_name
     render :profile_show
   end
 

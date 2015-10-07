@@ -57,7 +57,11 @@
   </div>
 
   <div class="review-container">
-    <h4><%= @user.first_name %>'s Reviews:</h4>
+    <% if @user.first_name %>
+      <h4><%= @user.first_name %>'s Reviews:</h4>
+    <% else %>
+      <h4><%= @user.email %>'s Reviews:</h4>
+    <% end %>
     <% @reviews.each do |review| %>
       <div class="review">
         <p>Review: <%= review.content %></p>
